@@ -1,0 +1,4681 @@
+fileFormatVersion: 2
+guid: c727087c674a3044692c309e3696b1e7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_0
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b13503ec91f30f4583c3ad117a2fe41
+      internalID: -148204882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1e8ac12d46105479294fb9653b9485
+      internalID: -752086459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50357a99347963440b8c77a7f1bc8022
+      internalID: 203822141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a4a4baa95fdb244b4c3945c469e59d
+      internalID: -796171922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_4
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05d830f7170f234890f5a1c2811caa6
+      internalID: 1018222884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20a9f149a99c49468f3fc66f20d110c
+      internalID: -363654905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_6
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4500de5de555d7e458b22ae7aa18201d
+      internalID: -258530111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_7
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247645a2b16950f42ae1a090617f62e2
+      internalID: -690659787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_8
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8ec9094a25faa4491da4b2b571ce7b
+      internalID: 193954831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_9
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87bd6db520a113439d2badaf0efb51b
+      internalID: 1826757106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_10
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bd17d90e491aa4c95cba2be4262ed1
+      internalID: -813724883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_11
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ce40d9288dc62429cc67e346415fb6
+      internalID: 1555739705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_12
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740e5740dd0b5ac49b767d080c9d2ff1
+      internalID: 1215551499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_13
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823437f75f9444b4284aa6f4b3149a11
+      internalID: -1623575900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_14
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9acb46308246c2d4b98d722014980a1b
+      internalID: 1960099419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_15
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ab5a261cf38ab498c8993a97393fba
+      internalID: 1223606867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_16
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c3346c53b9397448f6cfe15ee1355f
+      internalID: 1618086128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca785c185d7c3824690e7277ef0a7f7a
+      internalID: 1575932697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_18
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262994ea865729246be817e6c68f3d39
+      internalID: 1624769856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_19
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50c75ee99979b244878fb3439288ae2
+      internalID: -226149384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_20
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49229e99fad38a4fb8ba077af296a11
+      internalID: -2138707402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_21
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8a27d92398eb740a121fa81ead3aed
+      internalID: 747916896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aebb905d9474b1478ad90bb0f2a8cfd
+      internalID: -1167083713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_23
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5809181efb8a59645b48a28921238b37
+      internalID: -627747419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_24
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc45bc73ad840224c8c6f34caa318e1c
+      internalID: -1730991115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_25
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a666efa4f6025e4b9d3b82ffc56e054
+      internalID: -1330430899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_26
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0647bf6850ebb40931471d0dffad81
+      internalID: -1743212776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_27
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3791e434010947449a600c7a514ed24
+      internalID: -2042188333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_28
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9b256b61266414293a4eb87f88a463
+      internalID: 1238364780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_29
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c44677f62a40a46b9ade81fac4601c
+      internalID: 1599323253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_30
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7b3437bef96214e901b8787978b8a9
+      internalID: 1561125410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_31
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b569a2915f6413247bba785800406d7a
+      internalID: -688357423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_32
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3246cc689046df42a665767cfa6145f
+      internalID: -1442467310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_33
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1a4b1eac5b75d4699721867a645f63
+      internalID: 246897368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_34
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedb47f1376345c47b678a8494d01762
+      internalID: 89151368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_35
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b646d01d844484e8cfa954a5ac2fab
+      internalID: -2109145138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_36
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b34f9f7e5652f4288cfdc6cf236a8e
+      internalID: 1241274722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_37
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaec1bc02ca612b44a584a2a0ddcdbcd
+      internalID: 821630628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_38
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b80e33bfdf3e5458f67fcb40e989d4
+      internalID: -1722658372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_39
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6ecc43e8adecf40bb3bea875973fba
+      internalID: 558347923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_40
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ead05ad3724c4b4ca90bb056d674591
+      internalID: -127911171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_41
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec7184f09cf1424fb6ca86e9bba1fbd
+      internalID: 1461760907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_42
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b06c450e5d15c6488b363348036fa79
+      internalID: -789667763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_43
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f9de893e4ae2e45938c1ea109d3eb7
+      internalID: 55440122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_44
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c2d0d352c5d0c49b39cd0e0cd3bf4a
+      internalID: 251489024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_45
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78d29ef48f9b4b4b9274e620a7f349c
+      internalID: 576482125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_46
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7edc20e1b4acc408a005bf76b0f1f7
+      internalID: -1397915970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e931a11b99fa8a2419eb416c338fb4f1
+      internalID: -1505955287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_48
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177263bea3850c74da8294d2bc3fddaa
+      internalID: 627601717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_49
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be7d0394b618624082f930524ef92cc
+      internalID: 861922265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_50
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af8e31188afc9748be293d8b4fc6a43
+      internalID: 544269108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_51
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9392bbb09c8e7594384cb56acc2e82a8
+      internalID: -1311947137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_52
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafac3949d8604d4985d8ed5ccceb076
+      internalID: -2077978510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_53
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dbfa630b2730c1409e6a49469d00bc3
+      internalID: -1785534847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_54
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8330d48a3949864a9933a285c72dff5
+      internalID: -1347781985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_55
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaa5862b6fafe64c973a59b39ea4915
+      internalID: 1851732153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_56
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f1be03167fae34cad8e03b65426ad1
+      internalID: -1865906970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_57
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b84c5bcbe2c494793a44c78da51d04
+      internalID: 628512194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_58
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314732bacc298fd42ba8ade36b07be89
+      internalID: 95130079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_59
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89fed8b7b7b99c44eb30148d22f9429b
+      internalID: 1746879399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_60
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14556506e64ccb42b0fe9ac94a6980e
+      internalID: -1877921246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_61
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27035d16651ed8448bc6aa1f2f7f62ec
+      internalID: 333470646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_62
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b3227cfbeb0024cb2f6fdf2789de01
+      internalID: -1717548959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_63
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97428f712cf3294d9fadb765979c488
+      internalID: 232500148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_64
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a3141246f6e824ebeb050be2b6098c
+      internalID: 1620550624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_65
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a20e3ca878c8b41aa0256a0f2454a9
+      internalID: -964022913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_66
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7488b197bbf314fbf5c0fe709665ed
+      internalID: -958702908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_67
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96deb6cb419adf443bcf6d4f2d860a8d
+      internalID: 1168344628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_68
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c484021ce3c438348a3ad2204ab373d9
+      internalID: 1312196110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_69
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78709f713ba64344bb3532d3846c1322
+      internalID: 1136354847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_70
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0de9e91302b00245a1acae7af385563
+      internalID: 903386110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_71
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f66369b87ddae54f86c1a26d4c6806c
+      internalID: -1169586689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_72
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7414fbd04d01ef24d88a1821866c2415
+      internalID: 519803486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_73
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d4b3c47bbf8264d8816b7e6b3fc3d5
+      internalID: -655173794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_74
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75276e841bb41894498af847fa2db57b
+      internalID: 1405366753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_75
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6192e3cb8f7fa428236ad6594c6df7
+      internalID: 999394445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_76
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7599c53756ac44a991a098fb47b151
+      internalID: -90057325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fd61a3b6087e24a842941f8a6383e6
+      internalID: -489491607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_78
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e5928b2f3176347ab46a98cdbf981c
+      internalID: -381193947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_79
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98292b0a20358404f8019ca89e3a46e1
+      internalID: -514883363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_80
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709f1e5ee7301d8458ac17964cd46d2e
+      internalID: -895609392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_81
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f023ea1d05c60242b55eada8bceb5d2
+      internalID: -484473939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_82
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863d1c8ba7cdf6c4a90f4ff0c0a55675
+      internalID: 440995804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_83
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ac6a03f7d1a574a904e9ca518185e7
+      internalID: 1190798715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_84
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9f605aaa3422e408bccd3fa5c20ceb
+      internalID: 488160023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_85
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ff1d028650aeb4fa092fbe70dd53c2
+      internalID: -1422750921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_86
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5585f90fa549a549acdbf09c4b4ba6d
+      internalID: -1539687863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_87
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a847b3355a42f47ad1cc1fb8c8c279
+      internalID: -1390458199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_88
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4c9a002de13f9418a79347a10b7dd7
+      internalID: -185317479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_89
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf986a10c35a6c7438f0358c5defb4ed
+      internalID: 698896641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_90
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334dfb0eaa5850a41bc58c3784c98b12
+      internalID: 1547504576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_91
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a26bc5a7217f3e4ba22eafdccc18396
+      internalID: -1903122463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_92
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2220d1c5a7e4af844a460bbd98144910
+      internalID: 612320669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_93
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409cb08217e7ce84ab58416348ebd59f
+      internalID: -1872541573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_94
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29a4b25c9ccef54bb27d740b3712434
+      internalID: -1482770332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_95
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c0f43fadf59444c9873b7f89198bc2
+      internalID: -826669602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_96
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb5397eb349d064486357a66a8e8971
+      internalID: 572968049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_97
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d2ebe9a05de72428e46ddb3f74e714
+      internalID: 143842324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_98
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11df0ebd756c7004e934931bed1ce063
+      internalID: 124490674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_99
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d20edad24d4c694f878bf4afb780779
+      internalID: -1480679237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_100
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b74afeb11b609408605499324845fe
+      internalID: 407738971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_101
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5880ea63b957dc544a358cd0532fd82e
+      internalID: -1950511605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_102
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8be7143b1864449bc764a2be916029
+      internalID: 1995846727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_103
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d04c99d8ba87040b7856fc4ad10173
+      internalID: 1642552624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_104
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c838121880bde6e4389bed5ded024610
+      internalID: -581989243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_105
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d0157349a2eb547838d95de266dc77
+      internalID: -1633875474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_106
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5dbbde008316254985c1380add435d4
+      internalID: -2000677764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_107
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02e5590102a5aa4490ed9137e342e00
+      internalID: -637164432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f568b7a38767a78438966ca51946bc5b
+      internalID: 817732781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_109
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10af75333a2098a409bacac7e1d92bac
+      internalID: -1691825392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_110
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e511fd8174f309d4cbb0bc9d7049ee9f
+      internalID: -222380934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_111
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d841be8cf39e51c4caac8afd89989fc0
+      internalID: 1971518226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_112
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffcda2a57beddc47a9f3631d4ab543e
+      internalID: -1140308172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_113
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66f004871ce4c84c89a63aed32187a5
+      internalID: 1876773680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_114
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c950e1c73257bf5429055548f077176d
+      internalID: -725513262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_115
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceac618a6f5338941bf00c178d10f888
+      internalID: 592798927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_116
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aef35cca2150614a8e67cc3cf2aa83c
+      internalID: -918360485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_117
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61297518998f3d44a7e5984cb15011c
+      internalID: 1318316383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_118
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34876319cbef75e4199621c44cdc33ad
+      internalID: 174948082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_119
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353860e9a808bb24b98b822d0ff6c2b7
+      internalID: -428859414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_120
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3fd7b0cb7ec7c4e9c0bba4290bac45
+      internalID: -487419788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_121
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2fea2b07bf35540b85ac9d2c927a7d
+      internalID: -1054115256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_122
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f12b5ff2ad2a624b8d4c8e2790f64dc
+      internalID: 1546576677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_123
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fddb7cc522bb041aa82db93eff48ba
+      internalID: 646267713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_124
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a4a8cf146b1254594363d1ed0deab3
+      internalID: 666562386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_125
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37cbc0148a89dc44bf403430c47352e
+      internalID: 830233858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_126
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fd709426bf3aa4a870424bdfb0a49b
+      internalID: 1286214774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_127
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b6f3373a592654cb82f038ed153605
+      internalID: -1024157329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_128
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d7975c8d54e334cab5c64adbd2ac1c
+      internalID: 750648554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_129
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754cd656a7f888f4894e36a55d28c043
+      internalID: -601350444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_130
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a6dcff8900d6d469d0516bfb98c543
+      internalID: 1445972146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_131
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b448688db3be719489491ae74386d4f4
+      internalID: -811400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_132
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0189a790166146b4888856cd4acce061
+      internalID: 446484309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_133
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdfc0db97bac3f42ae58c014458f7d0
+      internalID: 1159267509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_134
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca75817f350d7b94e9bc3822db96681e
+      internalID: -875233500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_135
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5686d8c9dd50745b93ebfcc3fbd508
+      internalID: -349520993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_136
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee266a556c35aa41b0ad608fc90fa3a
+      internalID: -1448788924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_137
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ccd12a6a819b64cbd34cdd97cc68fd
+      internalID: -298570488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_138
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d355d962d1cbbd647a5c21fd9b2ad911
+      internalID: 1867827662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_139
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced61f9a9f074ca498f399e0d3616f39
+      internalID: 523224981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_140
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60d93e65daa3134bbbc032cbb951798
+      internalID: 884578362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_141
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cc161c8df73454ba2fa976b5f7db05
+      internalID: 551804697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_142
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcc68a26d000ce46974266522211c98
+      internalID: -145437183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_143
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe422f8d3b697fe419be3d4243bcf477
+      internalID: -48856839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_144
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1900c2b85f18b429398d8e0b4859c3
+      internalID: 903799094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_145
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e06d3c13cce23746a7850fd1e71df64
+      internalID: 1655134850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_146
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c84e4cff4e4dc344867bbb1cbc74fe5
+      internalID: -1339028222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_147
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddd34576cf3fe14db02bbed51a8b4d9
+      internalID: 454084231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_148
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f080f1892887ad54d84f91a083529983
+      internalID: -1369090312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_149
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c83a9aa59ce944cae75757587a0996
+      internalID: 1854967883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_150
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1ec691c504a1e4db71e21bf964af16
+      internalID: -190358833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_151
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03adbefcb4357a74c99c29a866e329d9
+      internalID: 1231123809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_152
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9262dfcf46e7b4459c2606f3d0c19b1
+      internalID: -1539513390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_153
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d87e1671490576468e47e2fc9406d12
+      internalID: 1791728318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_154
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a440f96721fb645b5515c87f72295c
+      internalID: -1934317739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_155
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b438fc603c6ce42a5b8f1622cd0965
+      internalID: -1982374331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_156
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e46971e253f87d49817407b04a59e35
+      internalID: -1545153953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_157
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec735fd44b4bf454c90ccd8fbd44348d
+      internalID: 1026593365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_158
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a17b62450246c640aadf619ba9a0513
+      internalID: 595494238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_159
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bfb4275eb2b34e4680c0ff40eb2b2ed
+      internalID: 1844657060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_160
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87f4d713309f5a41a8beaf93eeda2a1
+      internalID: -1026482097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_161
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4b90fb25d0b28458defc19bdb38d9a
+      internalID: 514687553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_162
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57106729fa12a764e8c4f71b2c0b2ea8
+      internalID: 1100914154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_163
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3c9ad513d366b4e91ba16e85d791ed
+      internalID: -1523299053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_164
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268be36fc74d7d24cad0d5d1e2c0f150
+      internalID: 161379028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_165
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47089dbd9aef4e4429fe9411b4f9ae89
+      internalID: 776525684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_166
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a5309f182965341a257a75564fa069
+      internalID: 1528278582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_167
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c094c204d46a85f4b842745af5dd30ae
+      internalID: -1953848127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_168
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897864a735a8fbb42942371ab6a55c4d
+      internalID: -1808540110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_169
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc324bccd8c5f46419015954762c2f82
+      internalID: 364869243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd16c81bd37c104d8d3b837e1b216c6
+      internalID: 1443262144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_171
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f01a313d8549b64aa32fc06d7f03a0b
+      internalID: 398748265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_172
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77066f09e35dc9488a7762b56808fc0
+      internalID: 220228795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_173
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2309516673efecc4195d3417fc326c32
+      internalID: 463819815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_174
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ddc4861d5d5a845ab4eeb2d249dffa
+      internalID: -416529392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_175
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df34b4e15cd67254d86c676bfe664f57
+      internalID: -2065753726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_176
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa738599813f35418308fbf440af953
+      internalID: -1767201059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_177
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a477d79d481f6249b8985f2b0d2b9ef
+      internalID: -1093717631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_178
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57358f76c05edf04a90ee100e508d21d
+      internalID: 1593492921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_179
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6e1106e16f13b4e88431b907e273a0
+      internalID: 670466466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_180
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9385a05931a276742af6c5af2cac10e7
+      internalID: -2144754834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_181
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4fe824c01888042b615dbc0cfd2492
+      internalID: 30009275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_182
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c7896338b3d0548b720ef17cdc19d9
+      internalID: 925017876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_183
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb35e7d0d78ddda4ea781abc1a9c6dc8
+      internalID: -1532982436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_184
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd01b6a9a32c654f827c84f29c83cd1
+      internalID: 2091428560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_185
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7179c619a4e5e784b923ef357acbba98
+      internalID: -901742503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_186
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca43035902d6fa40bfbb58c343a318f
+      internalID: 1884580667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_187
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2494e6f9e203346ba79c79544d566a
+      internalID: -670701264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_188
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9acf3eea87a48438fcc15f0a78f8f8
+      internalID: 258444571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_189
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1fd17002417714e9b9ba4f96999c7e
+      internalID: -105125397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_190
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74876e3eb362624fa228b103e2888bd
+      internalID: 1179751917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_191
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522b253388e08e74cb50db90c8aa23be
+      internalID: 1435467481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_192
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801aecdb344a7a74aa9ebccd503f4a84
+      internalID: -1628486972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_193
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00dc64359088f2544b2267f0150f3600
+      internalID: 1331113116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_194
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ab4cfdd5076a842b464e30ff0e2206
+      internalID: -700268502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_195
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08eefe78c1866e9459f52ea187451c16
+      internalID: 322054621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_196
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc44840bafbd96429cb13185d3c3797
+      internalID: -141251966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_197
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930dee77634e4ee4988ad3f2576445e3
+      internalID: 856015443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_198
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 13
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208d13bb845d2da41be9b9a0eb5d195e
+      internalID: -994972959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_199
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07749a2457eec30488f7f8dd592c3ae3
+      internalID: -766038176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_200
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7f0e2940c84e84db5e6616c07142f2
+      internalID: -701065165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_201
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b83e0b10102df47a6ac0b5e9f38fcc
+      internalID: 502030622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_202
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0760fb8a8225e884f954d4b9775ef263
+      internalID: 2067322892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_203
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392a776fe5773724e9f8c6cc50d58d85
+      internalID: 1724927882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_204
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2414a251bc2f634ea30005ed5ca37e8
+      internalID: 1908906325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_205
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e939571ff3a52584c8664fdb6a060950
+      internalID: 1267923443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mario Customs - City Tileset SMW-Style_206
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3988852c5eb25f24cbe40e66543e8f68
+      internalID: -221817573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Custom Edited - Mario Customs - City Tileset SMW-Style_0: -148204882
+      Custom Edited - Mario Customs - City Tileset SMW-Style_1: -752086459
+      Custom Edited - Mario Customs - City Tileset SMW-Style_10: -813724883
+      Custom Edited - Mario Customs - City Tileset SMW-Style_100: 407738971
+      Custom Edited - Mario Customs - City Tileset SMW-Style_101: -1950511605
+      Custom Edited - Mario Customs - City Tileset SMW-Style_102: 1995846727
+      Custom Edited - Mario Customs - City Tileset SMW-Style_103: 1642552624
+      Custom Edited - Mario Customs - City Tileset SMW-Style_104: -581989243
+      Custom Edited - Mario Customs - City Tileset SMW-Style_105: -1633875474
+      Custom Edited - Mario Customs - City Tileset SMW-Style_106: -2000677764
+      Custom Edited - Mario Customs - City Tileset SMW-Style_107: -637164432
+      Custom Edited - Mario Customs - City Tileset SMW-Style_108: 817732781
+      Custom Edited - Mario Customs - City Tileset SMW-Style_109: -1691825392
+      Custom Edited - Mario Customs - City Tileset SMW-Style_11: 1555739705
+      Custom Edited - Mario Customs - City Tileset SMW-Style_110: -222380934
+      Custom Edited - Mario Customs - City Tileset SMW-Style_111: 1971518226
+      Custom Edited - Mario Customs - City Tileset SMW-Style_112: -1140308172
+      Custom Edited - Mario Customs - City Tileset SMW-Style_113: 1876773680
+      Custom Edited - Mario Customs - City Tileset SMW-Style_114: -725513262
+      Custom Edited - Mario Customs - City Tileset SMW-Style_115: 592798927
+      Custom Edited - Mario Customs - City Tileset SMW-Style_116: -918360485
+      Custom Edited - Mario Customs - City Tileset SMW-Style_117: 1318316383
+      Custom Edited - Mario Customs - City Tileset SMW-Style_118: 174948082
+      Custom Edited - Mario Customs - City Tileset SMW-Style_119: -428859414
+      Custom Edited - Mario Customs - City Tileset SMW-Style_12: 1215551499
+      Custom Edited - Mario Customs - City Tileset SMW-Style_120: -487419788
+      Custom Edited - Mario Customs - City Tileset SMW-Style_121: -1054115256
+      Custom Edited - Mario Customs - City Tileset SMW-Style_122: 1546576677
+      Custom Edited - Mario Customs - City Tileset SMW-Style_123: 646267713
+      Custom Edited - Mario Customs - City Tileset SMW-Style_124: 666562386
+      Custom Edited - Mario Customs - City Tileset SMW-Style_125: 830233858
+      Custom Edited - Mario Customs - City Tileset SMW-Style_126: 1286214774
+      Custom Edited - Mario Customs - City Tileset SMW-Style_127: -1024157329
+      Custom Edited - Mario Customs - City Tileset SMW-Style_128: 750648554
+      Custom Edited - Mario Customs - City Tileset SMW-Style_129: -601350444
+      Custom Edited - Mario Customs - City Tileset SMW-Style_13: -1623575900
+      Custom Edited - Mario Customs - City Tileset SMW-Style_130: 1445972146
+      Custom Edited - Mario Customs - City Tileset SMW-Style_131: -811400
+      Custom Edited - Mario Customs - City Tileset SMW-Style_132: 446484309
+      Custom Edited - Mario Customs - City Tileset SMW-Style_133: 1159267509
+      Custom Edited - Mario Customs - City Tileset SMW-Style_134: -875233500
+      Custom Edited - Mario Customs - City Tileset SMW-Style_135: -349520993
+      Custom Edited - Mario Customs - City Tileset SMW-Style_136: -1448788924
+      Custom Edited - Mario Customs - City Tileset SMW-Style_137: -298570488
+      Custom Edited - Mario Customs - City Tileset SMW-Style_138: 1867827662
+      Custom Edited - Mario Customs - City Tileset SMW-Style_139: 523224981
+      Custom Edited - Mario Customs - City Tileset SMW-Style_14: 1960099419
+      Custom Edited - Mario Customs - City Tileset SMW-Style_140: 884578362
+      Custom Edited - Mario Customs - City Tileset SMW-Style_141: 551804697
+      Custom Edited - Mario Customs - City Tileset SMW-Style_142: -145437183
+      Custom Edited - Mario Customs - City Tileset SMW-Style_143: -48856839
+      Custom Edited - Mario Customs - City Tileset SMW-Style_144: 903799094
+      Custom Edited - Mario Customs - City Tileset SMW-Style_145: 1655134850
+      Custom Edited - Mario Customs - City Tileset SMW-Style_146: -1339028222
+      Custom Edited - Mario Customs - City Tileset SMW-Style_147: 454084231
+      Custom Edited - Mario Customs - City Tileset SMW-Style_148: -1369090312
+      Custom Edited - Mario Customs - City Tileset SMW-Style_149: 1854967883
+      Custom Edited - Mario Customs - City Tileset SMW-Style_15: 1223606867
+      Custom Edited - Mario Customs - City Tileset SMW-Style_150: -190358833
+      Custom Edited - Mario Customs - City Tileset SMW-Style_151: 1231123809
+      Custom Edited - Mario Customs - City Tileset SMW-Style_152: -1539513390
+      Custom Edited - Mario Customs - City Tileset SMW-Style_153: 1791728318
+      Custom Edited - Mario Customs - City Tileset SMW-Style_154: -1934317739
+      Custom Edited - Mario Customs - City Tileset SMW-Style_155: -1982374331
+      Custom Edited - Mario Customs - City Tileset SMW-Style_156: -1545153953
+      Custom Edited - Mario Customs - City Tileset SMW-Style_157: 1026593365
+      Custom Edited - Mario Customs - City Tileset SMW-Style_158: 595494238
+      Custom Edited - Mario Customs - City Tileset SMW-Style_159: 1844657060
+      Custom Edited - Mario Customs - City Tileset SMW-Style_16: 1618086128
+      Custom Edited - Mario Customs - City Tileset SMW-Style_160: -1026482097
+      Custom Edited - Mario Customs - City Tileset SMW-Style_161: 514687553
+      Custom Edited - Mario Customs - City Tileset SMW-Style_162: 1100914154
+      Custom Edited - Mario Customs - City Tileset SMW-Style_163: -1523299053
+      Custom Edited - Mario Customs - City Tileset SMW-Style_164: 161379028
+      Custom Edited - Mario Customs - City Tileset SMW-Style_165: 776525684
+      Custom Edited - Mario Customs - City Tileset SMW-Style_166: 1528278582
+      Custom Edited - Mario Customs - City Tileset SMW-Style_167: -1953848127
+      Custom Edited - Mario Customs - City Tileset SMW-Style_168: -1808540110
+      Custom Edited - Mario Customs - City Tileset SMW-Style_169: 364869243
+      Custom Edited - Mario Customs - City Tileset SMW-Style_17: 1575932697
+      Custom Edited - Mario Customs - City Tileset SMW-Style_170: 1443262144
+      Custom Edited - Mario Customs - City Tileset SMW-Style_171: 398748265
+      Custom Edited - Mario Customs - City Tileset SMW-Style_172: 220228795
+      Custom Edited - Mario Customs - City Tileset SMW-Style_173: 463819815
+      Custom Edited - Mario Customs - City Tileset SMW-Style_174: -416529392
+      Custom Edited - Mario Customs - City Tileset SMW-Style_175: -2065753726
+      Custom Edited - Mario Customs - City Tileset SMW-Style_176: -1767201059
+      Custom Edited - Mario Customs - City Tileset SMW-Style_177: -1093717631
+      Custom Edited - Mario Customs - City Tileset SMW-Style_178: 1593492921
+      Custom Edited - Mario Customs - City Tileset SMW-Style_179: 670466466
+      Custom Edited - Mario Customs - City Tileset SMW-Style_18: 1624769856
+      Custom Edited - Mario Customs - City Tileset SMW-Style_180: -2144754834
+      Custom Edited - Mario Customs - City Tileset SMW-Style_181: 30009275
+      Custom Edited - Mario Customs - City Tileset SMW-Style_182: 925017876
+      Custom Edited - Mario Customs - City Tileset SMW-Style_183: -1532982436
+      Custom Edited - Mario Customs - City Tileset SMW-Style_184: 2091428560
+      Custom Edited - Mario Customs - City Tileset SMW-Style_185: -901742503
+      Custom Edited - Mario Customs - City Tileset SMW-Style_186: 1884580667
+      Custom Edited - Mario Customs - City Tileset SMW-Style_187: -670701264
+      Custom Edited - Mario Customs - City Tileset SMW-Style_188: 258444571
+      Custom Edited - Mario Customs - City Tileset SMW-Style_189: -105125397
+      Custom Edited - Mario Customs - City Tileset SMW-Style_19: -226149384
+      Custom Edited - Mario Customs - City Tileset SMW-Style_190: 1179751917
+      Custom Edited - Mario Customs - City Tileset SMW-Style_191: 1435467481
+      Custom Edited - Mario Customs - City Tileset SMW-Style_192: -1628486972
+      Custom Edited - Mario Customs - City Tileset SMW-Style_193: 1331113116
+      Custom Edited - Mario Customs - City Tileset SMW-Style_194: -700268502
+      Custom Edited - Mario Customs - City Tileset SMW-Style_195: 322054621
+      Custom Edited - Mario Customs - City Tileset SMW-Style_196: -141251966
+      Custom Edited - Mario Customs - City Tileset SMW-Style_197: 856015443
+      Custom Edited - Mario Customs - City Tileset SMW-Style_198: -994972959
+      Custom Edited - Mario Customs - City Tileset SMW-Style_199: -766038176
+      Custom Edited - Mario Customs - City Tileset SMW-Style_2: 203822141
+      Custom Edited - Mario Customs - City Tileset SMW-Style_20: -2138707402
+      Custom Edited - Mario Customs - City Tileset SMW-Style_200: -701065165
+      Custom Edited - Mario Customs - City Tileset SMW-Style_201: 502030622
+      Custom Edited - Mario Customs - City Tileset SMW-Style_202: 2067322892
+      Custom Edited - Mario Customs - City Tileset SMW-Style_203: 1724927882
+      Custom Edited - Mario Customs - City Tileset SMW-Style_204: 1908906325
+      Custom Edited - Mario Customs - City Tileset SMW-Style_205: 1267923443
+      Custom Edited - Mario Customs - City Tileset SMW-Style_206: -221817573
+      Custom Edited - Mario Customs - City Tileset SMW-Style_21: 747916896
+      Custom Edited - Mario Customs - City Tileset SMW-Style_22: -1167083713
+      Custom Edited - Mario Customs - City Tileset SMW-Style_23: -627747419
+      Custom Edited - Mario Customs - City Tileset SMW-Style_24: -1730991115
+      Custom Edited - Mario Customs - City Tileset SMW-Style_25: -1330430899
+      Custom Edited - Mario Customs - City Tileset SMW-Style_26: -1743212776
+      Custom Edited - Mario Customs - City Tileset SMW-Style_27: -2042188333
+      Custom Edited - Mario Customs - City Tileset SMW-Style_28: 1238364780
+      Custom Edited - Mario Customs - City Tileset SMW-Style_29: 1599323253
+      Custom Edited - Mario Customs - City Tileset SMW-Style_3: -796171922
+      Custom Edited - Mario Customs - City Tileset SMW-Style_30: 1561125410
+      Custom Edited - Mario Customs - City Tileset SMW-Style_31: -688357423
+      Custom Edited - Mario Customs - City Tileset SMW-Style_32: -1442467310
+      Custom Edited - Mario Customs - City Tileset SMW-Style_33: 246897368
+      Custom Edited - Mario Customs - City Tileset SMW-Style_34: 89151368
+      Custom Edited - Mario Customs - City Tileset SMW-Style_35: -2109145138
+      Custom Edited - Mario Customs - City Tileset SMW-Style_36: 1241274722
+      Custom Edited - Mario Customs - City Tileset SMW-Style_37: 821630628
+      Custom Edited - Mario Customs - City Tileset SMW-Style_38: -1722658372
+      Custom Edited - Mario Customs - City Tileset SMW-Style_39: 558347923
+      Custom Edited - Mario Customs - City Tileset SMW-Style_4: 1018222884
+      Custom Edited - Mario Customs - City Tileset SMW-Style_40: -127911171
+      Custom Edited - Mario Customs - City Tileset SMW-Style_41: 1461760907
+      Custom Edited - Mario Customs - City Tileset SMW-Style_42: -789667763
+      Custom Edited - Mario Customs - City Tileset SMW-Style_43: 55440122
+      Custom Edited - Mario Customs - City Tileset SMW-Style_44: 251489024
+      Custom Edited - Mario Customs - City Tileset SMW-Style_45: 576482125
+      Custom Edited - Mario Customs - City Tileset SMW-Style_46: -1397915970
+      Custom Edited - Mario Customs - City Tileset SMW-Style_47: -1505955287
+      Custom Edited - Mario Customs - City Tileset SMW-Style_48: 627601717
+      Custom Edited - Mario Customs - City Tileset SMW-Style_49: 861922265
+      Custom Edited - Mario Customs - City Tileset SMW-Style_5: -363654905
+      Custom Edited - Mario Customs - City Tileset SMW-Style_50: 544269108
+      Custom Edited - Mario Customs - City Tileset SMW-Style_51: -1311947137
+      Custom Edited - Mario Customs - City Tileset SMW-Style_52: -2077978510
+      Custom Edited - Mario Customs - City Tileset SMW-Style_53: -1785534847
+      Custom Edited - Mario Customs - City Tileset SMW-Style_54: -1347781985
+      Custom Edited - Mario Customs - City Tileset SMW-Style_55: 1851732153
+      Custom Edited - Mario Customs - City Tileset SMW-Style_56: -1865906970
+      Custom Edited - Mario Customs - City Tileset SMW-Style_57: 628512194
+      Custom Edited - Mario Customs - City Tileset SMW-Style_58: 95130079
+      Custom Edited - Mario Customs - City Tileset SMW-Style_59: 1746879399
+      Custom Edited - Mario Customs - City Tileset SMW-Style_6: -258530111
+      Custom Edited - Mario Customs - City Tileset SMW-Style_60: -1877921246
+      Custom Edited - Mario Customs - City Tileset SMW-Style_61: 333470646
+      Custom Edited - Mario Customs - City Tileset SMW-Style_62: -1717548959
+      Custom Edited - Mario Customs - City Tileset SMW-Style_63: 232500148
+      Custom Edited - Mario Customs - City Tileset SMW-Style_64: 1620550624
+      Custom Edited - Mario Customs - City Tileset SMW-Style_65: -964022913
+      Custom Edited - Mario Customs - City Tileset SMW-Style_66: -958702908
+      Custom Edited - Mario Customs - City Tileset SMW-Style_67: 1168344628
+      Custom Edited - Mario Customs - City Tileset SMW-Style_68: 1312196110
+      Custom Edited - Mario Customs - City Tileset SMW-Style_69: 1136354847
+      Custom Edited - Mario Customs - City Tileset SMW-Style_7: -690659787
+      Custom Edited - Mario Customs - City Tileset SMW-Style_70: 903386110
+      Custom Edited - Mario Customs - City Tileset SMW-Style_71: -1169586689
+      Custom Edited - Mario Customs - City Tileset SMW-Style_72: 519803486
+      Custom Edited - Mario Customs - City Tileset SMW-Style_73: -655173794
+      Custom Edited - Mario Customs - City Tileset SMW-Style_74: 1405366753
+      Custom Edited - Mario Customs - City Tileset SMW-Style_75: 999394445
+      Custom Edited - Mario Customs - City Tileset SMW-Style_76: -90057325
+      Custom Edited - Mario Customs - City Tileset SMW-Style_77: -489491607
+      Custom Edited - Mario Customs - City Tileset SMW-Style_78: -381193947
+      Custom Edited - Mario Customs - City Tileset SMW-Style_79: -514883363
+      Custom Edited - Mario Customs - City Tileset SMW-Style_8: 193954831
+      Custom Edited - Mario Customs - City Tileset SMW-Style_80: -895609392
+      Custom Edited - Mario Customs - City Tileset SMW-Style_81: -484473939
+      Custom Edited - Mario Customs - City Tileset SMW-Style_82: 440995804
+      Custom Edited - Mario Customs - City Tileset SMW-Style_83: 1190798715
+      Custom Edited - Mario Customs - City Tileset SMW-Style_84: 488160023
+      Custom Edited - Mario Customs - City Tileset SMW-Style_85: -1422750921
+      Custom Edited - Mario Customs - City Tileset SMW-Style_86: -1539687863
+      Custom Edited - Mario Customs - City Tileset SMW-Style_87: -1390458199
+      Custom Edited - Mario Customs - City Tileset SMW-Style_88: -185317479
+      Custom Edited - Mario Customs - City Tileset SMW-Style_89: 698896641
+      Custom Edited - Mario Customs - City Tileset SMW-Style_9: 1826757106
+      Custom Edited - Mario Customs - City Tileset SMW-Style_90: 1547504576
+      Custom Edited - Mario Customs - City Tileset SMW-Style_91: -1903122463
+      Custom Edited - Mario Customs - City Tileset SMW-Style_92: 612320669
+      Custom Edited - Mario Customs - City Tileset SMW-Style_93: -1872541573
+      Custom Edited - Mario Customs - City Tileset SMW-Style_94: -1482770332
+      Custom Edited - Mario Customs - City Tileset SMW-Style_95: -826669602
+      Custom Edited - Mario Customs - City Tileset SMW-Style_96: 572968049
+      Custom Edited - Mario Customs - City Tileset SMW-Style_97: 143842324
+      Custom Edited - Mario Customs - City Tileset SMW-Style_98: 124490674
+      Custom Edited - Mario Customs - City Tileset SMW-Style_99: -1480679237
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
