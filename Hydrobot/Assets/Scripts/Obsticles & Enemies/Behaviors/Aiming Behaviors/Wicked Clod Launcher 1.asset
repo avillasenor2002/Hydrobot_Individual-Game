@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c52223ae6dba184da63943e16d65606, type: 3}
-  m_Name: Clod Launcher
+  m_Name: Wicked Clod Launcher 1
   m_EditorClassIdentifier: 
   detectionRange: 10
   detectionAngle: 90
-  rotationSpeed: 5
+  rotationSpeed: 99
   returnSpeed: 3
   allowedObstacleTag: Projectile
   noticeSound: {fileID: 8300000, guid: 5ead85aca59c9e54699cdd480cde2170, type: 3}
-  scalePulseAmount: 0.2
-  scalePulseDuration: 0.2
+  scalePulseAmount: 0
+  scalePulseDuration: 0
   projectileBehavior: {fileID: 11400000, guid: 2498e8cae899997429985c1f0dbb9f78, type: 2}
-  projectilePrefab: {fileID: 2472470062704236980, guid: c18cc79191227f644b35b50546887730, type: 3}
-  chargeDuration: 0.75
-  chargeScaleAmount: 0.2
-  fireRate: 1.5
+  projectilePrefab: {fileID: 2472470062704236980, guid: 3f954e53924e74c45af57c4cdb1e3265, type: 3}
+  chargeDuration: 0.3
+  chargeScaleAmount: 0
+  fireRate: 0.5
