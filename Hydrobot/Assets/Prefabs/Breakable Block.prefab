@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7e2be4fd9d0007541a7e711129aa9ff6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 8a63ce7ee5e835b43bafe7eb8a92821b, type: 3}
   audioSource: {fileID: 0}
   hp: 3
-  spriteRenderer: {fileID: 5026692067095366607}
   flickerDuration: 0.1
   deathEffect: {fileID: 5164732817971479510, guid: f08f97b84d6899b4dacbe9dbb4abb6e5, type: 3}
   isObject: 1
+  waterLoss: 10

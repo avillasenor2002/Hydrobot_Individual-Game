@@ -4,45 +4,48 @@ using UnityEngine;
 
 public class WaterProjectile : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;  // Speed of the projectile
-    [SerializeField] private float specialSpeed = 20f;  // Speed of the projectile
-    [SerializeField] private Rigidbody2D rb;     // Reference to the Rigidbody2D component
-    [SerializeField] private GameObject splashPrefab; // Prefab to instantiate on collision
-    [SerializeField] private AudioClip destroySound; // Assign sound effect in Inspector
-    [SerializeField] private AudioSource audioSourcePrefab; // Prefab with AudioSource to play the sound
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float specialSpeed = 20f;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameObject splashPrefab;
+    [SerializeField] private AudioClip destroySound;
+    [SerializeField] private AudioSource audioSourcePrefab;
+    [SerializeField] private int damage = 1;
 
     private void Start()
     {
-        // Set the projectile's velocity in the direction it is facing
         PlayerRotation player = FindObjectOfType<PlayerRotation>();
-
         if (player != null)
-        {
-            if (player.isSpecial == false)
-            {
-                rb.velocity = transform.up * speed;  // Move in the direction the projectile is facing
-            }
-            else
-            {
-                rb.velocity = transform.up * specialSpeed;
-            }
-        }
+            rb.velocity = transform.up * (player.isSpecial ? specialSpeed : speed);
         else
-        {
             Debug.Log("PlayerRotation script not found in the scene.");
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Instantiate the splash prefab at the collision point
-        Instantiate(splashPrefab, transform.position, Quaternion.identity);
+        // Try to damage the enemy first
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            // Apply damage
+            enemy.TakeDamage(damage);
 
-        // Play sound before destroying
+            // Trigger shrink behavior if this enemy has a ProjectileBehavior
+            if (enemy.behavior is ProjectileBehavior projectileBehavior)
+            {
+                projectileBehavior.OnProjectileHit(enemy);
+            }
+        }
+
+        // Instantiate splash if assigned
+        if (splashPrefab != null)
+            Instantiate(splashPrefab, transform.position, Quaternion.identity);
+
+        // Play sound
         PlayDestroySound();
 
-        // Destroy the projectile when it collides with any object
-        Kill();
+        // Destroy the projectile after dealing damage
+        Destroy(gameObject);
     }
 
     private void PlayDestroySound()
@@ -52,12 +55,7 @@ public class WaterProjectile : MonoBehaviour
             AudioSource tempAudioSource = Instantiate(audioSourcePrefab, transform.position, Quaternion.identity);
             tempAudioSource.clip = destroySound;
             tempAudioSource.Play();
-            Destroy(tempAudioSource.gameObject, destroySound.length); // Destroy the AudioSource object after the sound plays
+            Destroy(tempAudioSource.gameObject, destroySound.length);
         }
-    }
-
-    public void Kill()
-    {
-        Destroy(gameObject);
     }
 }

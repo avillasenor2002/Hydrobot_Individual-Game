@@ -1,129 +1,265 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+[ExecuteAlways]
+[RequireComponent(typeof(Collider2D))]
 public class Enemy : MonoBehaviour
 {
     public static event System.Action OnEnemyDestroyed;
 
+    [Header("Enemy Stats")]
+    public int health = 3;
+    public int waterLoss = 10;
     [SerializeField] private AudioClip waterImpactSound;
     [SerializeField] private AudioClip deathSound;
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private int hp = 3;
-    [SerializeField] private float flickerDuration = 0.1f;
     [SerializeField] private ParticleSystem deathEffect;
-    public bool isObject = false;  // Set this flag in the Inspector for "object" enemies.
-    private PlayerDamage player;
-    public float waterLoss = 10f;  // The amount of water to lose when colliding with the player
+    [SerializeField] public AudioSource audioSource;
+    [SerializeField] private float flickerDuration = 0.1f;
 
+    [Header("Tilemap Settings")]
+    public Tilemap targetTilemap;
+    public bool snapToTilemap = true;
+    public bool isObject = false;
+
+    [Header("Behavior")]
+    public EnemyBehavior behavior;
+
+    [HideInInspector] public bool isBeingInhaled = false;
+    public bool isDead = false;
+
+    private Collider2D col;
     private bool isInvincible = false;
     private float invincibilityTimer = 0f;
 
+    //Used for TrackingBehavior and other behaviors
+    [HideInInspector] public bool IsFiring = false;
+    [HideInInspector] public bool HasFiredThisFrame = false;
+    [HideInInspector] public bool HasNoticedPlayer = false;
+    [HideInInspector] public float initialZRotation;
 
-    private void Start()
+
+
+
+    private void Awake()
     {
-        player = FindObjectOfType<PlayerDamage>();
+        col = GetComponent<Collider2D>();
 
-        // Auto-assign audioSource to an object named "SFX" if not manually assigned
+
+        // Store initial Z rotation
+        initialZRotation = transform.eulerAngles.z;
+
+        // Auto-assign tilemap if missing
+        if (targetTilemap == null)
+            FindMainTilemap();
+
+        // Auto-assign audioSource if missing
         if (audioSource == null)
         {
             GameObject sfxObject = GameObject.Find("SFX");
             if (sfxObject != null)
-            {
                 audioSource = sfxObject.GetComponent<AudioSource>();
-            }
-        }
-
-        // Lock object to tile grid if marked as an object
-        if (isObject)
-        {
-            GameObject tilemapObject = GameObject.Find("Main Tilemap");
-            if (tilemapObject != null)
-            {
-                Tilemap tilemap = tilemapObject.GetComponent<Tilemap>();
-                if (tilemap != null)
-                {
-                    Vector3 worldPos = transform.position;
-                    Vector3Int cellPos = tilemap.WorldToCell(worldPos);
-                    Vector3 snappedPos = tilemap.GetCellCenterWorld(cellPos);
-                    transform.position = snappedPos;
-                }
-            }
         }
     }
 
+    private void Start()
+    {
+        SnapToTilemapIfNeeded();
+    }
+
+#if UNITY_EDITOR
     private void Update()
     {
+        if (!Application.isPlaying)
+            SnapAllEnemiesToTilemap();
+    }
+#endif
+
+    private void FixedUpdate()
+    {
+        if (Application.isPlaying && behavior != null && !isDead && !isBeingInhaled)
+        {
+            behavior.Execute(this);
+        }
+
         if (isInvincible)
         {
-            invincibilityTimer -= Time.deltaTime;
+            invincibilityTimer -= Time.fixedDeltaTime;
             if (invincibilityTimer <= 0f)
-            {
                 isInvincible = false;
-            }
         }
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void SnapToTilemapIfNeeded()
     {
-        if (isInvincible) return;  // Ignore damage if invincible
-
-        if (collision.gameObject.GetComponent<WaterProjectile>())
+        if (snapToTilemap)
         {
+            if (targetTilemap == null)
+                FindMainTilemap();
+
+            if (targetTilemap != null)
+                SnapToTilemap();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isDead || isInvincible) return;
+
+        bool hitProjectile = false;
+
+        // Check for WaterProjectile component
+        if (other.GetComponent<WaterProjectile>() != null)
+            hitProjectile = true;
+
+        // Check if object is on Projectile layer AND has tag "Projectile"
+        if (other.gameObject.CompareTag("Projectile"))
+            hitProjectile = true;
+
+        if (hitProjectile)
+        {
+            if (audioSource != null && waterImpactSound != null)
+                audioSource.PlayOneShot(waterImpactSound);
+
+            StartCoroutine(FlickerWhite());
+            TakeDamage(1);
+
+            ///*// NEW: If this is a projectile enemy, shrink it
+            //if (behavior is ProjectileBehavior proj)
+            //    proj.OnProjectileHit(this*/);
+        }
+
+
+        // Player collision (optional)
+        if (other.CompareTag("Player"))
+        {
+            PlayerDamage player = other.GetComponent<PlayerDamage>();
+            if (player != null)
             {
-                if (audioSource != null && waterImpactSound != null)
-                {
-                    audioSource.PlayOneShot(waterImpactSound);
-                }
+                // player.LoseWater(waterLoss); // optional
+            }
+        }
 
-                StartCoroutine(FlickerWhite());
-                hp--;
+        // If this Enemy uses ProjectileBehavior, shrink or destroy
+        if (behavior is ProjectileBehavior proj)
+        {
+            proj.OnProjectileHit(this);
 
-                if (hp <= 0)
-                {
-                    if (audioSource != null && deathSound != null)
-                    {
-                        audioSource.PlayOneShot(deathSound);
-                    }
+            // Always destroy the projectile GameObject
+            Destroy(other.gameObject);
+        }
+    }
 
-                    if (deathEffect != null)
-                    {
-                        Instantiate(deathEffect, transform.position, Quaternion.identity);
-                    }
 
-                    if (!isObject)
-                    {
-                        OnEnemyDestroyed?.Invoke();
-                    }
 
-                    Destroy(gameObject);
-                }
+
+    public void TakeDamage(int amount)
+    {
+        if (isDead) return;
+
+        health -= amount;
+        MakeInvincible(0.2f);
+
+        if (health <= 0)
+            Die();
+    }
+
+    public void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+
+        if (deathEffect != null)
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+
+        if (audioSource != null && deathSound != null)
+            audioSource.PlayOneShot(deathSound);
+
+        if (!isObject)
+            OnEnemyDestroyed?.Invoke();
+
+        Destroy(gameObject);
+    }
+
+    private IEnumerator FlickerWhite()
+    {
+        SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+        foreach (var r in renderers) r.enabled = false;
+        yield return new WaitForSeconds(flickerDuration);
+        foreach (var r in renderers) r.enabled = true;
+    }
+
+    public void MakeInvincible(float duration)
+    {
+        isInvincible = true;
+        invincibilityTimer = duration;
+    }
+
+    // ---------------- Tilemap Helpers ----------------
+    private void SnapToTilemap()
+    {
+        if (targetTilemap == null) return;
+        Vector3Int cell = targetTilemap.WorldToCell(transform.position);
+        transform.position = targetTilemap.GetCellCenterWorld(cell);
+    }
+
+    private void FindMainTilemap()
+    {
+        Tilemap[] maps = FindObjectsOfType<Tilemap>();
+        foreach (Tilemap map in maps)
+        {
+            if (map.gameObject.name == "Main Tilemap")
+            {
+                targetTilemap = map;
+                return;
             }
         }
     }
-        private IEnumerator FlickerWhite()
+
+#if UNITY_EDITOR
+    private void SnapAllEnemiesToTilemap()
+    {
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        foreach (var enemy in enemies)
         {
-            SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
-
-            // Disable renderers
-            foreach (var renderer in renderers)
+            if (enemy.snapToTilemap)
             {
-                renderer.enabled = false;
-            }
+                if (enemy.targetTilemap == null)
+                    enemy.FindMainTilemap();
 
-            yield return new WaitForSeconds(flickerDuration);
-
-            // Re-enable renderers
-            foreach (var renderer in renderers)
-            {
-                renderer.enabled = true;
+                if (enemy.targetTilemap != null)
+                    enemy.SnapToTilemap();
             }
         }
 
-        public void MakeInvincible(float duration)
-        {
-            isInvincible = true;
-            invincibilityTimer = duration;
-        }
+         if (behavior is TrackingBehavior tracking)
+    {
+       /* Gizmos.color = new Color(1f, 0f, 0f, 0.25f);
+
+        // Draw a semi-transparent cone
+        Vector3 forward = transform.up;
+        Vector3 position = transform.position;
+
+        Handles.color = new Color(1f, 0f, 0f, 0.2f);
+
+        float angle = tracking.detectionAngle;
+        float range = tracking.detectionRange;
+
+        Vector3 rightDir = Quaternion.Euler(0, 0, angle) * forward;
+        Vector3 leftDir = Quaternion.Euler(0, 0, -angle) * forward;
+
+        // Draw lines
+        Gizmos.DrawLine(position, position + rightDir * range);
+        Gizmos.DrawLine(position, position + leftDir * range);
+
+        // Draw arc for the cone
+        Handles.DrawSolidArc(position, Vector3.forward, leftDir, angle * 2, range);*/
+    }
+    }
+#endif
+
+
 }

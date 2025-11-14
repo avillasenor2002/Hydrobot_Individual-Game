@@ -48,12 +48,19 @@ public class PlayerRotation : MonoBehaviour
     {
         moveInputValue = value.Get<Vector2>();
 
-        // Check if using a Gamepad
+        // Rumble ONLY when moving AND special mode is active
         if (Gamepad.current != null)
         {
-            // Vibrate the controller when movement input is received
-            Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);  // Low and High vibration intensity
-            Invoke("StopVibration", 0.2f);  // Stop vibration after a short delay
+            if (moveInputValue.sqrMagnitude > 0.01f && isSpecial)
+            {
+                Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
+                Invoke("StopVibration", 0.01f);
+            }
+            else
+            {
+                // Ensure vibration turns off when not moving or not special
+                Gamepad.current.SetMotorSpeeds(0f, 0f);
+            }
         }
     }
 

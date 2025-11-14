@@ -111,8 +111,19 @@
                 },
                 {
                     "name": "",
+                    "id": "5fe996a4-e7f9-469c-a230-929b4e18f7bd",
+                    "path": "<HID::Nintendo If_Hid>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement & Firing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5f71cf05-5a1b-479b-b15d-b048182ac503",
-                    "path": "<SwitchProControllerHID>/buttonEast",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -133,8 +144,19 @@
                 },
                 {
                     "name": "",
+                    "id": "6dcc8871-fa18-4f91-8ded-5275e37ab148",
+                    "path": "<HID::Nintendo If_Hid>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Freeze",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e1ae584c-b147-4e55-823c-e9b95d076aa3",
-                    "path": "<SwitchProControllerHID>/buttonSouth",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "Gamepad",
@@ -149,6 +171,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Special Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "710a2fa6-ef0b-46a6-8d09-6333defc7f4a",
+                    "path": "<HID::Nintendo If_Hid>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Special Action",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -171,6 +204,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "47dee3ef-9b6e-4e49-a110-b4f314c354e1",
+                    "path": "<HID::Nintendo If_Hid>/button7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
