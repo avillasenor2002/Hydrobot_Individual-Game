@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 6686801322492362988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.33, y: -0.71, z: 0}
+  m_LocalPosition: {x: -6.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -130,14 +130,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5121a1e23011fa48a0aedf72c94b51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 6
+  waterLoss: 30
   waterImpactSound: {fileID: 8300000, guid: c529d93c04f855b4c87cf78fb39cafea, type: 3}
   deathSound: {fileID: 8300000, guid: c8db99c89943e1541b8408b038696002, type: 3}
-  audioSource: {fileID: 0}
-  hp: 7
-  flickerDuration: 0.01
   deathEffect: {fileID: 5164732817971479510, guid: f08f97b84d6899b4dacbe9dbb4abb6e5, type: 3}
+  audioSource: {fileID: 0}
+  flickerDuration: 0.01
+  targetTilemap: {fileID: 0}
+  snapToTilemap: 1
   isObject: 0
-  waterLoss: 30
+  behavior: {fileID: 0}
+  isBeingInhaled: 0
+  isDead: 0
+  IsFiring: 0
+  HasFiredThisFrame: 0
+  HasNoticedPlayer: 0
+  initialZRotation: 0
 --- !u!58 &339572426307080109
 CircleCollider2D:
   m_ObjectHideFlags: 0
