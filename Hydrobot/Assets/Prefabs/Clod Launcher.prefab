@@ -65,6 +65,7 @@ MonoBehaviour:
   HasFiredThisFrame: 0
   HasNoticedPlayer: 0
   initialZRotation: 0
+  noticeCooldown: 0
 --- !u!58 &2103718030042152922
 CircleCollider2D:
   m_ObjectHideFlags: 0

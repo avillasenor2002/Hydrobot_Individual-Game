@@ -40,6 +40,8 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public bool HasFiredThisFrame = false;
     [HideInInspector] public bool HasNoticedPlayer = false;
     [HideInInspector] public float initialZRotation;
+    public float noticeCooldown = 0f;
+
 
 
 
