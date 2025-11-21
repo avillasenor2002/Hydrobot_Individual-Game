@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2860188744930895836}
-  - component: {fileID: 5680696384875414960}
+  - component: {fileID: 8411010778316118971}
   - component: {fileID: 2103718030042152922}
+  - component: {fileID: 5297562267199221355}
+  - component: {fileID: 2692586837780487030}
   m_Layer: 0
   m_Name: Clod Launcher
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758320605632752996}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6951075, w: 0.71890575}
   m_LocalPosition: {x: -19.5, y: -1.5, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
@@ -36,7 +38,7 @@ Transform:
   - {fileID: 8955532345906316214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5680696384875414960
+--- !u!114 &8411010778316118971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,27 +47,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 758320605632752996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5121a1e23011fa48a0aedf72c94b51d, type: 3}
+  m_Script: {fileID: 11500000, guid: 62aa006b844275a4c804cc26179609fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 9
-  waterLoss: 30
   waterImpactSound: {fileID: 8300000, guid: c529d93c04f855b4c87cf78fb39cafea, type: 3}
   deathSound: {fileID: 8300000, guid: c8db99c89943e1541b8408b038696002, type: 3}
   deathEffect: {fileID: 5164732817971479510, guid: f08f97b84d6899b4dacbe9dbb4abb6e5, type: 3}
   audioSource: {fileID: 0}
-  flickerDuration: 0.01
+  flickerDuration: 0.1
   targetTilemap: {fileID: 0}
   snapToTilemap: 1
-  isObject: 0
-  behavior: {fileID: 11400000, guid: 6def6a3311b97654a85b69ba631d31f2, type: 2}
-  isBeingInhaled: 0
-  isDead: 0
-  IsFiring: 0
-  HasFiredThisFrame: 0
-  HasNoticedPlayer: 0
-  initialZRotation: 0
-  noticeCooldown: 0
+  detectionRange: 10
+  detectionAngle: 90
+  rotationSpeed: 5
+  returnSpeed: 3
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 64
+  noticeSound: {fileID: 8300000, guid: 5ead85aca59c9e54699cdd480cde2170, type: 3}
+  scalePulseAmount: 0.2
+  scalePulseDuration: 0.2
+  projectilePrefab: {fileID: 2472470062704236980, guid: c18cc79191227f644b35b50546887730, type: 3}
+  projectileBehavior: {fileID: 11400000, guid: 2498e8cae899997429985c1f0dbb9f78, type: 2}
+  chargeDuration: 1.5
+  chargeScaleAmount: 0.2
+  fireRate: 2
+  enemyPrefab: {fileID: 8411010778316118971}
 --- !u!58 &2103718030042152922
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -101,6 +109,66 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &5297562267199221355
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758320605632752996}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2692586837780487030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758320605632752996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5121a1e23011fa48a0aedf72c94b51d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 9
+  waterLoss: 30
+  waterImpactSound: {fileID: 8300000, guid: c529d93c04f855b4c87cf78fb39cafea, type: 3}
+  deathSound: {fileID: 8300000, guid: c8db99c89943e1541b8408b038696002, type: 3}
+  deathEffect: {fileID: 5164732817971479510, guid: f08f97b84d6899b4dacbe9dbb4abb6e5, type: 3}
+  audioSource: {fileID: 0}
+  flickerDuration: 0.1
+  targetTilemap: {fileID: 0}
+  snapToTilemap: 1
+  isObject: 0
+  behavior: {fileID: 0}
+  isBeingInhaled: 0
+  isDead: 0
+  col: {fileID: 2103718030042152922}
+  isInvincible: 0
+  invincibilityTimer: 0
+  IsFiring: 0
+  HasFiredThisFrame: 0
+  HasNoticedPlayer: 0
+  initialZRotation: 0
+  noticeCooldown: 0
 --- !u!1 &5447251480301527862
 GameObject:
   m_ObjectHideFlags: 0
@@ -9911,7 +9979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &33521667729730044
 Transform:
   m_ObjectHideFlags: 0

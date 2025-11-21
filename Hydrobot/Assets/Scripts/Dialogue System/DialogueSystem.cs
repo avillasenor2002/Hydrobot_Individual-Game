@@ -20,6 +20,8 @@ public class DialogueSystem : MonoBehaviour
     private Coroutine typingRoutine;
     private Coroutine hideRoutine;
 
+    public event System.Action OnDialogueFinished;
+
     private void Start()
     {
         dialogueGroup.alpha = 0f;
@@ -71,6 +73,7 @@ public class DialogueSystem : MonoBehaviour
 
         yield return StartCoroutine(FadeCanvasGroup(1f, 0f, fadeDuration));
         dialogueGroup.gameObject.SetActive(false);
+        OnDialogueFinished?.Invoke();
     }
 
     private IEnumerator FadeCanvasGroup(float from, float to, float duration)

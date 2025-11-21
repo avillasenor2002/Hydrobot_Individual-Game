@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Clod Launcher
   m_EditorClassIdentifier: 
   detectionRange: 10
-  noticeBufferDistance: 1.5
-  loseTargetDelay: 0.3
-  allowedObstacleTag: Projectile
-  rotationSpeed: 5
+  detectionAngle: 120
+  rotationSpeed: 10
   returnSpeed: 3
+  allowedObstacleTag: SeeThrough
   noticeSound: {fileID: 8300000, guid: 5ead85aca59c9e54699cdd480cde2170, type: 3}
   scalePulseAmount: 0.2
   scalePulseDuration: 0.2

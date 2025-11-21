@@ -4,223 +4,158 @@ using System.Collections;
 [CreateAssetMenu(fileName = "TrackingBehavior", menuName = "Enemy Behaviors/Tracking")]
 public class TrackingBehavior : EnemyBehavior
 {
-    [Header("Detection")]
+    [Header("Tracking Settings")]
     public float detectionRange = 6f;
-    public float noticeBufferDistance = 1.5f; // extra “stickiness” range
-    public float loseTargetDelay = 0.3f;
-    public string allowedObstacleTag = "SeeThrough";
-
-    [Header("Rotation")]
-    public float rotationSpeed = 6f;
+    public float detectionAngle = 45f;
+    public float rotationSpeed = 10f;
     public float returnSpeed = 3f;
+
+    [Header("Line of Sight")]
+    public string allowedObstacleTag = "SeeThrough";
 
     [Header("Notice Effects")]
     public AudioClip noticeSound;
     public float scalePulseAmount = 0.2f;
     public float scalePulseDuration = 0.2f;
 
-    [Header("Firing")]
+    [Header("Projectile Firing")]
     public ProjectileBehavior projectileBehavior;
     public GameObject projectilePrefab;
     public float chargeDuration = 1.5f;
     public float chargeScaleAmount = 0.3f;
     public float fireRate = 2f;
 
-    private Transform playerTransform;
-
     public override void Execute(Enemy enemy)
     {
-        if (!enemy || enemy.isDead || enemy.isBeingInhaled) return;
+        if (enemy.isDead || enemy.isBeingInhaled) return;
 
-        // cache player
-        if (playerTransform == null)
-        {
-            var p = GameObject.FindWithTag("Player");
-            if (!p) return;
-            playerTransform = p.transform;
-        }
+        // Runtime reference to the player (per enemy)
+        Transform playerTransform = enemy.GetPlayerTransform();
+        if (playerTransform == null) return;
 
-        // distance check only
         Vector2 toPlayer = playerTransform.position - enemy.transform.position;
-        float dist = toPlayer.magnitude;
+        bool detected = IsPlayerDetected(enemy, toPlayer);
 
-        bool insideDetectRange = dist <= detectionRange;
-        bool insideStickyRange = dist <= detectionRange + noticeBufferDistance;
+        HandleNoticeEffects(enemy, detected);
 
-        bool detectedThisFrame = false;
+        // Rotation updates continuously
+        HandleRotation(enemy, detected, toPlayer);
 
-        // -------- RANGE BASED DETECTION --------
-        if (insideDetectRange && HasLineOfSight(enemy, toPlayer.normalized, dist))
-            detectedThisFrame = true;
-
-        // -------- STICKY TRACKING --------
-        if (detectedThisFrame)
+        // Fire loop is started independently per enemy
+        if (detected && !enemy.IsFiring && projectilePrefab != null)
         {
-            if (!enemy.HasNoticedPlayer)
-            {
-                if (noticeSound && enemy.audioSource)
-                    enemy.audioSource.PlayOneShot(noticeSound);
-
-                enemy.StartCoroutine(PulseScale(enemy.transform));
-            }
-
-            enemy.HasNoticedPlayer = true;
-            enemy.noticeCooldown = loseTargetDelay;
-        }
-        else
-        {
-            if (enemy.HasNoticedPlayer && insideStickyRange)
-            {
-                // player is out of LOS but close enough – still track a bit
-                enemy.noticeCooldown -= Time.deltaTime;
-                if (enemy.noticeCooldown > 0) { }
-                else enemy.HasNoticedPlayer = false;
-            }
-            else
-            {
-                enemy.HasNoticedPlayer = false;
-            }
-        }
-
-        // -------- ROTATION LOGIC --------
-        if (enemy.HasNoticedPlayer)
-        {
-            RotateTowardPlayer(enemy);
-
-            if (!enemy.IsFiring && projectilePrefab)
-                enemy.StartCoroutine(FireLoop(enemy));
-        }
-        else
-        {
-            enemy.transform.rotation = Quaternion.Lerp(
-                enemy.transform.rotation,
-                Quaternion.Euler(0, 0, enemy.initialZRotation),
-                returnSpeed * Time.deltaTime
-            );
+            enemy.StartCoroutine(FireLoop(enemy, playerTransform));
         }
     }
 
-    // ----------- LOS CHECK -----------
-    private bool HasLineOfSight(Enemy enemy, Vector2 dir, float distance)
+    private bool IsPlayerDetected(Enemy enemy, Vector2 toPlayer)
     {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(enemy.transform.position, dir, distance);
+        if (toPlayer.magnitude > detectionRange) return false;
+        if (Vector2.Angle(enemy.transform.up, toPlayer) > detectionAngle) return false;
 
-        foreach (var h in hits)
+        RaycastHit2D[] hits = Physics2D.RaycastAll(enemy.transform.position, toPlayer.normalized, toPlayer.magnitude);
+        foreach (var hit in hits)
         {
-            if (!h.collider) continue;
-            if (h.collider.gameObject == enemy.gameObject) continue;
-            if (h.collider.isTrigger) continue;
-
-            if (h.collider.CompareTag("Player"))
-                return true;
-
-            if (h.collider.CompareTag(allowedObstacleTag))
-                continue;
-
+            if (hit.collider == null || hit.collider.gameObject == enemy.gameObject) continue;
+            if (hit.collider.CompareTag("Player")) break;
+            if (hit.collider.CompareTag(allowedObstacleTag)) continue;
             return false;
         }
 
-        return false;
+        return true;
     }
 
-    // ----------- ROTATION TOWARD PLAYER -----------
-    private void RotateTowardPlayer(Enemy enemy)
+    private void HandleNoticeEffects(Enemy enemy, bool detected)
     {
-        Vector3 dir = playerTransform.position - enemy.transform.position;
-        float targetAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
+        if (detected && !enemy.HasNoticedPlayer)
+        {
+            if (noticeSound != null && enemy.audioSource != null)
+                enemy.audioSource.PlayOneShot(noticeSound);
 
+            enemy.StartCoroutine(PulseScale(enemy.transform));
+            enemy.HasNoticedPlayer = true;
+        }
+        else if (!detected)
+        {
+            enemy.HasNoticedPlayer = false;
+        }
+    }
+
+    private void HandleRotation(Enemy enemy, bool detected, Vector2 toPlayer)
+    {
+        float targetAngle = detected ? Mathf.Atan2(toPlayer.y, toPlayer.x) * Mathf.Rad2Deg - 90f : enemy.initialZRotation;
         enemy.transform.rotation = Quaternion.Lerp(
             enemy.transform.rotation,
             Quaternion.Euler(0, 0, targetAngle),
-            rotationSpeed * Time.deltaTime
+            (detected ? rotationSpeed : returnSpeed) * Time.fixedDeltaTime
         );
     }
 
-    // ----------- FIRING LOOP -----------
-    private IEnumerator FireLoop(Enemy enemy)
+    private IEnumerator FireLoop(Enemy enemy, Transform playerTransform)
     {
         enemy.IsFiring = true;
 
-        Transform chargeT = enemy.transform.Find("Charge Particles");
-        Transform fireT = enemy.transform.Find("Dirt Fired");
+        // Small random delay to desync multiple enemies
+        yield return new WaitForSeconds(Random.Range(0f, 0.3f));
 
-        ParticleSystem chargePS = chargeT ? chargeT.GetComponent<ParticleSystem>() : null;
-        ParticleSystem firePS = fireT ? fireT.GetComponent<ParticleSystem>() : null;
+        Transform chargeParticles = enemy.transform.Find("Charge Particles");
+        Transform fireParticles = enemy.transform.Find("Dirt Fired");
 
-        while (!enemy.isDead && enemy.HasNoticedPlayer)
+        while (!enemy.isDead)
         {
-            // charge
-            if (chargeT) chargeT.gameObject.SetActive(true);
-            if (chargePS)
-            {
-                chargePS.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-                chargePS.Play();
-            }
+            Vector2 toPlayer = playerTransform.position - enemy.transform.position;
+            bool detected = toPlayer.magnitude <= detectionRange && Vector2.Angle(enemy.transform.up, toPlayer) <= detectionAngle;
 
-            Vector3 original = enemy.transform.localScale;
-            Vector3 target = original * (1f + chargeScaleAmount);
+            if (!detected) break; // stop firing if player out of range
 
-            float t = 0f;
-            while (t < chargeDuration)
-            {
-                enemy.transform.localScale = Vector3.Lerp(original, target, t / chargeDuration);
-                t += Time.deltaTime;
-                yield return null;
-            }
+            // --- Charge animation ---
+            if (chargeParticles != null) chargeParticles.gameObject.SetActive(true);
 
-            enemy.transform.localScale = original;
-
-            if (chargePS) chargePS.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-            if (chargeT) chargeT.gameObject.SetActive(false);
-
-            // fire
-            if (projectilePrefab)
-            {
-                GameObject proj = Object.Instantiate(projectilePrefab, enemy.transform.position, enemy.transform.rotation);
-                ProjectileMono pm = proj.GetComponent<ProjectileMono>();
-                if (pm && projectileBehavior)
-                    pm.Initialize(enemy.transform.up, projectileBehavior, enemy);
-            }
-
-            if (fireT)
-            {
-                fireT.gameObject.SetActive(true);
-                if (firePS)
-                {
-                    firePS.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-                    firePS.Play();
-                }
-            }
-
-            yield return new WaitForSeconds(0.4f);
-
-            if (firePS) firePS.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-            if (fireT) fireT.gameObject.SetActive(false);
-
-            // wait until next shot
+            Vector3 originalScale = enemy.transform.localScale;
+            Vector3 targetScale = originalScale * (1f + chargeScaleAmount);
             float timer = 0f;
-            while (timer < fireRate && enemy.HasNoticedPlayer && !enemy.isDead)
+            while (timer < chargeDuration)
             {
+                enemy.transform.localScale = Vector3.Lerp(originalScale, targetScale, timer / chargeDuration);
                 timer += Time.deltaTime;
                 yield return null;
             }
+            enemy.transform.localScale = originalScale;
+            if (chargeParticles != null) chargeParticles.gameObject.SetActive(false);
+
+            // --- Fire projectile ---
+            if (projectilePrefab != null)
+            {
+                GameObject projGO = Object.Instantiate(projectilePrefab, enemy.transform.position, enemy.transform.rotation);
+                ProjectileMono projMono = projGO.GetComponent<ProjectileMono>();
+                if (projMono != null && projectileBehavior != null)
+                    projMono.Initialize(enemy.transform.up, projectileBehavior, enemy);
+            }
+
+            // Fire particles
+            if (fireParticles != null)
+            {
+                fireParticles.gameObject.SetActive(true);
+                yield return new WaitForSeconds(0.5f);
+                fireParticles.gameObject.SetActive(false);
+            }
+
+            yield return new WaitForSeconds(fireRate);
         }
 
         enemy.IsFiring = false;
     }
 
-    // ----------- PULSE EFFECT -----------
-    private IEnumerator PulseScale(Transform t)
+    private IEnumerator PulseScale(Transform enemyTransform)
     {
-        Vector3 orig = t.localScale;
-        Vector3 bigger = orig * (1f + scalePulseAmount);
-
+        Vector3 originalScale = enemyTransform.localScale;
+        Vector3 biggerScale = originalScale * (1f + scalePulseAmount);
         float half = scalePulseDuration / 2f;
         float timer = 0f;
 
         while (timer < half)
         {
-            t.localScale = Vector3.Lerp(orig, bigger, timer / half);
+            enemyTransform.localScale = Vector3.Lerp(originalScale, biggerScale, timer / half);
             timer += Time.deltaTime;
             yield return null;
         }
@@ -228,11 +163,11 @@ public class TrackingBehavior : EnemyBehavior
         timer = 0f;
         while (timer < half)
         {
-            t.localScale = Vector3.Lerp(bigger, orig, timer / half);
+            enemyTransform.localScale = Vector3.Lerp(biggerScale, originalScale, timer / half);
             timer += Time.deltaTime;
             yield return null;
         }
 
-        t.localScale = orig;
+        enemyTransform.localScale = originalScale;
     }
 }

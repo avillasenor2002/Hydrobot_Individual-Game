@@ -54,11 +54,8 @@
             v2f vert(appdata v)
             {
                 v2f o;
-
-                // Apply offset IN OBJECT SPACE (pixel perfect)
                 float4 offsetVertex = v.vertex;
                 offsetVertex.xy += _ShadowOffset.xy;
-
                 o.vertex = UnityObjectToClipPos(offsetVertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 return o;
@@ -72,7 +69,11 @@
                     distance(col.rgb, _KeyColor2.rgb) < _Threshold)
                     discard;
 
-                return _ShadowColor * _Color;
+                // Multiply shadow by tint color, preserve shadow alpha
+                fixed4 finalCol = _ShadowColor;
+                finalCol.rgb *= _Color.rgb;
+                finalCol.a *= _Color.a;
+                return finalCol;
             }
             ENDCG
         }
@@ -122,7 +123,11 @@
                     distance(col.rgb, _KeyColor2.rgb) < _Threshold)
                     col.a = 0;
 
-                return col * _Color;
+                // Apply tint color including alpha for transparency
+                col.rgb *= _Color.rgb;
+                col.a *= _Color.a;
+
+                return col;
             }
             ENDCG
         }

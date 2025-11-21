@@ -85,8 +85,8 @@ Material:
     - _KeyColor: {r: 0.43921572, g: 0.6039216, b: 0.8196079, a: 1}
     - _KeyColor0: {r: 0, g: 0.40000004, b: 0.31764707, a: 1}
     - _KeyColor1: {r: 0, g: 0.40000004, b: 0.31764707, a: 1}
-    - _KeyColor2: {r: 1, g: 0, b: 0.844852, a: 1}
+    - _KeyColor2: {r: 0.20000002, g: 0.53333336, b: 0.34117648, a: 1}
     - _KeyColor3: {r: 0, g: 0.40000004, b: 0.31764707, a: 1}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0.57254905}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _ShadowOffset: {r: 0.1, g: -0.1, b: 0, a: 0}
   m_BuildTextureStacks: []

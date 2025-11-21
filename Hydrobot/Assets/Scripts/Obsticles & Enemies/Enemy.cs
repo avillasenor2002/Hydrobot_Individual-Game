@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     [Header("Enemy Stats")]
     public int health = 3;
     public int waterLoss = 10;
-    [SerializeField] private AudioClip waterImpactSound;
+    [SerializeField] public AudioClip waterImpactSound;
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private ParticleSystem deathEffect;
     [SerializeField] public AudioSource audioSource;
@@ -31,9 +31,9 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public bool isBeingInhaled = false;
     public bool isDead = false;
 
-    private Collider2D col;
-    private bool isInvincible = false;
-    private float invincibilityTimer = 0f;
+    public Collider2D col;
+    public bool isInvincible = false;
+    public float invincibilityTimer = 0f;
 
     //Used for TrackingBehavior and other behaviors
     [HideInInspector] public bool IsFiring = false;
@@ -41,9 +41,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public bool HasNoticedPlayer = false;
     [HideInInspector] public float initialZRotation;
     public float noticeCooldown = 0f;
-
-
-
+    public bool isProtected = false; // set by protection enemy
 
 
     private void Awake()
@@ -67,7 +65,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void Start()
     {
         SnapToTilemapIfNeeded();
     }
@@ -168,7 +166,8 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
             Die();
     }
-
+    
+    public event System.Action<Enemy> OnEnemyDeath;
     public void Die()
     {
         if (isDead) return;
@@ -180,13 +179,13 @@ public class Enemy : MonoBehaviour
         if (audioSource != null && deathSound != null)
             audioSource.PlayOneShot(deathSound);
 
-        if (!isObject)
-            OnEnemyDestroyed?.Invoke();
+        OnEnemyDeath?.Invoke(this); // notify manager
 
         Destroy(gameObject);
     }
 
-    private IEnumerator FlickerWhite()
+
+    public IEnumerator FlickerWhite()
     {
         SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
         foreach (var r in renderers) r.enabled = false;
@@ -220,6 +219,13 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    public Transform GetPlayerTransform()
+    {
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        return playerObj != null ? playerObj.transform : null;
+    }
+
 
 #if UNITY_EDITOR
     private void SnapAllEnemiesToTilemap()

@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8107bc155109014baed5c06eb1022d0, type: 3}
-  m_Name: D01_AVA_GP03_05
+  m_Name: D01_AVA_GP03_06 5
   m_EditorClassIdentifier: 
-  dialogueText: Oh no, looks like that Clod Launcher is protected, we have to break
-    it's sheilds first!
+  dialogueText: ...wait how do we get over there?
   characterName: Professor Avalon
   characterIcon: {fileID: 21300000, guid: a0295e70cb287994ba8642314cca3d6c, type: 3}
   textSpeed: 0.025
