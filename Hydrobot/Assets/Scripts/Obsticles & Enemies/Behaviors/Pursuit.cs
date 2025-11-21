@@ -5,13 +5,11 @@ using System.Collections;
 public class PursuitBehavior : EnemyBehavior
 {
     [Header("Pursuit Settings")]
-    public float speed = 2f;              // Movement speed of the enemy
-    public float pursuitRange = 5f;       // Distance within which the enemy pursues the player
-    public AudioClip noticeSound;         // Sound played once when the player is noticed
-    public float scalePulseAmount = 0.2f; // How much bigger the enemy grows temporarily
+    public float speed = 2f;               // Movement speed of the enemy
+    public float pursuitRange = 5f;        // Distance within which the enemy pursues the player
+    public AudioClip noticeSound;          // Sound played once when the player is noticed
+    public float scalePulseAmount = 0.2f;  // How much bigger the enemy grows temporarily
     public float scalePulseDuration = 0.2f; // How long the pulse animation lasts
-
-    private bool hasNoticedPlayer = false;
 
     public override void Execute(Enemy enemy)
     {
@@ -25,14 +23,19 @@ public class PursuitBehavior : EnemyBehavior
 
         if (distance <= pursuitRange)
         {
-            // Play notice sound and pulse only once
-            if (!hasNoticedPlayer)
+            // Play notice sound and pulse only once per enemy
+            if (!enemy.HasNoticedPlayer)
             {
                 if (noticeSound != null && enemy.audioSource != null)
                     enemy.audioSource.PlayOneShot(noticeSound);
 
-                enemy.StartCoroutine(PulseScale(enemy.transform));
-                hasNoticedPlayer = true;
+                if (!enemy.IsFiring) // reuse IsFiring as "isPulsing"
+                {
+                    enemy.IsFiring = true;
+                    enemy.StartCoroutine(PulseScale(enemy));
+                }
+
+                enemy.HasNoticedPlayer = true;
             }
 
             direction.Normalize();
@@ -40,12 +43,14 @@ public class PursuitBehavior : EnemyBehavior
         }
         else
         {
-            hasNoticedPlayer = false; // Reset notice state if player leaves range
+            // Reset notice state if player leaves range
+            enemy.HasNoticedPlayer = false;
         }
     }
 
-    private IEnumerator PulseScale(Transform enemyTransform)
+    private IEnumerator PulseScale(Enemy enemy)
     {
+        Transform enemyTransform = enemy.transform;
         Vector3 originalScale = enemyTransform.localScale;
         Vector3 targetScale = originalScale * (1f + scalePulseAmount);
 
@@ -68,6 +73,7 @@ public class PursuitBehavior : EnemyBehavior
             yield return null;
         }
 
-        enemyTransform.localScale = originalScale; // Ensure exact original scale at the end
+        enemyTransform.localScale = originalScale;
+        enemy.IsFiring = false; // pulse finished
     }
 }

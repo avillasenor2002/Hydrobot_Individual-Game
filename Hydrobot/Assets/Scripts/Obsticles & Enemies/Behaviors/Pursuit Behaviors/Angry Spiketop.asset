@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Angry Spiketop
   m_EditorClassIdentifier: 
   speed: 1.5
-  pursuitRange: 4
+  pursuitRange: 6
   noticeSound: {fileID: 8300000, guid: 5ead85aca59c9e54699cdd480cde2170, type: 3}
   scalePulseAmount: 0.2
   scalePulseDuration: 0.1

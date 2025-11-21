@@ -1,18 +1,14 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using System.Reflection;
 using System;
 
-/// <summary>
-/// Level intro manager that fades intro UI and then reactivates/resets all TrackingEnemy instances in the scene.
-/// This script uses reflection to reset private fields on TrackingEnemy so enemies reliably restart after the intro.
-/// </summary>
 public class LevelIntroManager : MonoBehaviour
 {
     [Header("UI Elements")]
-    [SerializeField] private GameObject introUIRoot; // root of intro UI
+    [SerializeField] private GameObject introUIRoot;
     [SerializeField] private float fadeDuration = 1f;
 
     [Header("Audio")]
@@ -20,9 +16,22 @@ public class LevelIntroManager : MonoBehaviour
     [SerializeField] private AudioClip introMusic;
     [SerializeField] private AudioClip mainMusic;
 
+    [Header("Intro Dialogue (Optional)")]
+    public DialogueSystem dialogueSystem;
+    public DialogueData[] dialogueSequence;
+    public bool playDialogueOnce = true;
+    public bool playSequentially = true;
+
+    [Header("Debug Options")]
+    public bool useOldEnemyCounter = false; // debug toggle to use old EnemyCounter
+
     private bool isIntroActive = true;
     private Image[] uiImages;
     private Text[] uiTexts;
+
+    // Dialogue playback state
+    private int currentIndex = 0;
+    private bool dialoguePlayed = false;
 
     private void Start()
     {
@@ -39,6 +48,24 @@ public class LevelIntroManager : MonoBehaviour
             uiImages = introUIRoot.GetComponentsInChildren<Image>(true);
             uiTexts = introUIRoot.GetComponentsInChildren<Text>(true);
         }
+
+        // Optional: initialize old EnemyCounter if debug bool is true
+        if (useOldEnemyCounter)
+        {
+            Debug.Log("[LevelIntroManager] Using old EnemyCounter for debugging purposes.");
+
+            EnemyCounter counter = FindObjectOfType<EnemyCounter>();
+            if (counter == null)
+            {
+                // Try to find the prefab or create a new GameObject
+                GameObject counterGO = new GameObject("EnemyCounter");
+                counter = counterGO.AddComponent<EnemyCounter>();
+                Debug.Log("[LevelIntroManager] EnemyCounter was missing, created a new one at runtime.");
+            }
+
+            // Ensure the counter is active
+            counter.gameObject.SetActive(true);
+        }
     }
 
     private void Update()
@@ -46,16 +73,14 @@ public class LevelIntroManager : MonoBehaviour
         if (!isIntroActive) return;
 
         bool anyKeyboard = Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame;
-        bool anyGamepad = false;
-        if (Gamepad.current != null)
-        {
-            anyGamepad = Gamepad.current.buttonSouth.wasPressedThisFrame ||
-                         Gamepad.current.buttonNorth.wasPressedThisFrame ||
-                         Gamepad.current.buttonEast.wasPressedThisFrame ||
-                         Gamepad.current.buttonWest.wasPressedThisFrame ||
-                         Gamepad.current.startButton.wasPressedThisFrame ||
-                         Gamepad.current.selectButton.wasPressedThisFrame;
-        }
+        bool anyGamepad = Gamepad.current != null && (
+            Gamepad.current.buttonSouth.wasPressedThisFrame ||
+            Gamepad.current.buttonNorth.wasPressedThisFrame ||
+            Gamepad.current.buttonEast.wasPressedThisFrame ||
+            Gamepad.current.buttonWest.wasPressedThisFrame ||
+            Gamepad.current.startButton.wasPressedThisFrame ||
+            Gamepad.current.selectButton.wasPressedThisFrame
+        );
 
         if (anyKeyboard || anyGamepad)
         {
@@ -106,11 +131,47 @@ public class LevelIntroManager : MonoBehaviour
             yield return null;
         }
 
-        if (introUIRoot != null) introUIRoot.SetActive(false); // Fully disable UI
-        Time.timeScale = 1f; // Resume gameplay
+        if (introUIRoot != null) introUIRoot.SetActive(false);
+        Time.timeScale = 1f;
 
-        // Reactivate/reset all tracking enemies now that gameplay resumes
+        // Start sequential dialogue if assigned
+        if (dialogueSystem != null && dialogueSequence != null && dialogueSequence.Length > 0)
+        {
+            if (!dialoguePlayed || !playDialogueOnce)
+            {
+                dialoguePlayed = true;
+                currentIndex = 0;
+                dialogueSystem.OnDialogueFinished += HandleDialogueFinished;
+                PlayDialogueLine(currentIndex);
+            }
+        }
+
         ReactivateAllTrackingEnemies();
+    }
+
+    private void PlayDialogueLine(int index)
+    {
+        index = Mathf.Clamp(index, 0, dialogueSequence.Length - 1);
+        dialogueSystem.ShowDialogue(dialogueSequence[index]);
+    }
+
+    private void HandleDialogueFinished()
+    {
+        if (!playSequentially)
+        {
+            dialogueSystem.OnDialogueFinished -= HandleDialogueFinished;
+            return;
+        }
+
+        currentIndex++;
+
+        if (currentIndex >= dialogueSequence.Length)
+        {
+            dialogueSystem.OnDialogueFinished -= HandleDialogueFinished;
+            return;
+        }
+
+        PlayDialogueLine(currentIndex);
     }
 
     // -----------------------------
@@ -245,7 +306,6 @@ public class LevelIntroManager : MonoBehaviour
         if (trackingType == null) return;
 
         // Try to find an event or field named OnTrackingEnemyDestroyed and clear it
-        // Events are usually backed by a private static field with same name in C#
         var field = trackingType.GetField("OnTrackingEnemyDestroyed", BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public);
         if (field != null)
         {
@@ -253,11 +313,9 @@ public class LevelIntroManager : MonoBehaviour
             return;
         }
 
-        // If not found as a field, try as an event and reset via reflection to null (non-portable but attempted)
         var evt = trackingType.GetEvent("OnTrackingEnemyDestroyed", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
         if (evt != null)
         {
-            // obtain backing field by naming convention "<EventName>k__BackingField" or same name
             var backing = trackingType.GetField("OnTrackingEnemyDestroyed", BindingFlags.Static | BindingFlags.NonPublic);
             if (backing != null) backing.SetValue(null, null);
         }
@@ -269,7 +327,6 @@ public class LevelIntroManager : MonoBehaviour
 
         var t = trackingEnemyInstance.GetType();
 
-        // Activate GameObject
         var goProp = t.GetProperty("gameObject", BindingFlags.Instance | BindingFlags.Public);
         if (goProp != null)
         {
@@ -281,7 +338,6 @@ public class LevelIntroManager : MonoBehaviour
         }
         else
         {
-            // fallback: try field 'gameObject' (rare)
             var goField = t.GetField("gameObject", BindingFlags.Instance | BindingFlags.NonPublic);
             if (goField != null)
             {
@@ -290,7 +346,6 @@ public class LevelIntroManager : MonoBehaviour
             }
         }
 
-        // Helper to set private instance fields safely
         void SetPrivateBool(string name, bool value)
         {
             var fi = t.GetField(name, BindingFlags.Instance | BindingFlags.NonPublic);
@@ -312,7 +367,6 @@ public class LevelIntroManager : MonoBehaviour
                 fi.SetValue(trackingEnemyInstance, value);
         }
 
-        // Reset common private flags used in the TrackingEnemy implementation
         SetPrivateBool("isDead", false);
         SetPrivateBool("hasNoticedPlayer", false);
         SetPrivateBool("isInvincible", false);
@@ -320,16 +374,13 @@ public class LevelIntroManager : MonoBehaviour
         SetPrivateFloat("invincibilityTimer", 0f);
         SetPrivateFloat("fireCooldown", 0f);
 
-        // Restore playerTransform to current player
         Transform playerTrans = GameObject.FindWithTag("Player")?.transform;
         SetPrivateTransform("playerTransform", playerTrans);
 
-        // Attempt to restore rotation to initialZRotation if that private field exists
         var initField = t.GetField("initialZRotation", BindingFlags.Instance | BindingFlags.NonPublic);
         if (initField != null && initField.FieldType == typeof(float))
         {
             float initZ = (float)initField.GetValue(trackingEnemyInstance);
-            // set actual transform rotation
             var transformProp = t.GetProperty("transform", BindingFlags.Instance | BindingFlags.Public);
             if (transformProp != null)
             {
@@ -341,7 +392,6 @@ public class LevelIntroManager : MonoBehaviour
             }
         }
 
-        // Call SnapToTilemap() if exists (private)
         var snapMethod = t.GetMethod("SnapToTilemap", BindingFlags.Instance | BindingFlags.NonPublic);
         if (snapMethod != null)
         {
@@ -349,7 +399,6 @@ public class LevelIntroManager : MonoBehaviour
         }
         else
         {
-            // try public SnapToTilemapIfNeeded or SnapToTilemap public variations
             var snapPub = t.GetMethod("SnapToTilemapIfNeeded", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
             if (snapPub != null)
             {
@@ -357,7 +406,6 @@ public class LevelIntroManager : MonoBehaviour
             }
         }
 
-        // If there is a public method to explicitly reset the enemy, call it
         var resetMethod = t.GetMethod("ResetEnemy", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
         if (resetMethod != null)
         {

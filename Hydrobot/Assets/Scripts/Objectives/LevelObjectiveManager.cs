@@ -24,6 +24,9 @@ public class LevelObjective
     [Header("Objects to Destroy")]
     public List<Enemy> objectsToDestroy = new List<Enemy>(); // Drag Enemy objects with isObject = true here
 
+    [Header("Exclude Enemies From Count")]
+    public List<Enemy> excludedEnemyPrefabs = new List<Enemy>(); // Prefabs to NOT count toward the enemy counter
+
     [Header("UI Display")]
     public string objectiveName;
 }
@@ -45,26 +48,36 @@ public class LevelObjectiveManager : MonoBehaviour
 
     private void Start()
     {
-        // Initialize target count
         switch (currentObjective.objectiveType)
         {
             case LevelObjectiveType.DefeatEnemies:
                 if (currentObjective.useGenericEnemyCount)
+                {
                     targetCount = currentObjective.genericEnemyCount;
+                }
                 else if (currentObjective.targetEnemyPrefab != null)
+                {
                     targetCount = currentObjective.specificEnemyCount;
+                }
                 else
                 {
+                    // Count only enemies that are NOT objects and not excluded
                     Enemy[] allEnemies = FindObjectsOfType<Enemy>();
                     targetCount = 0;
                     foreach (var e in allEnemies)
-                        if (!e.isObject) targetCount++;
+                    {
+                        if (!e.isObject && !currentObjective.excludedEnemyPrefabs.Contains(e))
+                            targetCount++;
+                    }
                 }
 
-                // Subscribe to all existing enemies
+                // Subscribe to death events for enemies that are NOT objects and not excluded
                 Enemy[] enemies = FindObjectsOfType<Enemy>();
                 foreach (var e in enemies)
-                    e.OnEnemyDeath += HandleEnemyDeath;
+                {
+                    if (!e.isObject && !currentObjective.excludedEnemyPrefabs.Contains(e))
+                        e.OnEnemyDeath += HandleEnemyDeath;
+                }
                 break;
 
             case LevelObjectiveType.DestroyObjects:
@@ -84,18 +97,22 @@ public class LevelObjectiveManager : MonoBehaviour
     {
         if (currentObjective.objectiveType == LevelObjectiveType.DefeatEnemies)
         {
-            if (currentObjective.useGenericEnemyCount)
+            // Only count enemies that are NOT objects and NOT excluded
+            if (!deadEnemy.isObject && !currentObjective.excludedEnemyPrefabs.Contains(deadEnemy))
             {
-                currentCount++;
-            }
-            else if (currentObjective.targetEnemyPrefab != null)
-            {
-                if (deadEnemy.name.StartsWith(currentObjective.targetEnemyPrefab.name))
+                if (currentObjective.useGenericEnemyCount)
+                {
                     currentCount++;
-            }
-            else
-            {
-                currentCount++;
+                }
+                else if (currentObjective.targetEnemyPrefab != null)
+                {
+                    if (deadEnemy.name.StartsWith(currentObjective.targetEnemyPrefab.name))
+                        currentCount++;
+                }
+                else
+                {
+                    currentCount++;
+                }
             }
         }
         else if (currentObjective.objectiveType == LevelObjectiveType.DestroyObjects)

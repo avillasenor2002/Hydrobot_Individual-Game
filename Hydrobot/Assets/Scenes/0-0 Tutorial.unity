@@ -11298,11 +11298,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 812428994887256635, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.36311
+      value: -30.5
       objectReference: {fileID: 0}
     - target: {fileID: 812428994887256635, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -34.99408
+      value: -34.5
       objectReference: {fileID: 0}
     - target: {fileID: 812428994887256635, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11340,6 +11340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Spiketop (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8348476861710795662, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
+      propertyPath: targetTilemap
+      value: 
+      objectReference: {fileID: 2018771851}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16909,11 +16913,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 812428994887256635, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.552464
+      value: -31.5
       objectReference: {fileID: 0}
     - target: {fileID: 812428994887256635, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -37.623173
+      value: -37.5
       objectReference: {fileID: 0}
     - target: {fileID: 812428994887256635, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16951,6 +16955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Spiketop (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8348476861710795662, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
+      propertyPath: targetTilemap
+      value: 
+      objectReference: {fileID: 2018771851}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17148,7 +17156,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6686801322492362988, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1035139756}
   m_SourcePrefab: {fileID: 100100000, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
 --- !u!1 &878695589
 GameObject:
@@ -17431,11 +17442,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 812428994887256635, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.859211
+      value: -27.5
       objectReference: {fileID: 0}
     - target: {fileID: 812428994887256635, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -36.9346
+      value: -36.5
       objectReference: {fileID: 0}
     - target: {fileID: 812428994887256635, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17473,6 +17484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Spiketop (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8348476861710795662, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
+      propertyPath: targetTilemap
+      value: 
+      objectReference: {fileID: 2018771851}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18647,6 +18662,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6686801322492362988, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
   m_PrefabInstance: {fileID: 857752378}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1035139756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035139752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f295636f06ad6d543aa70876af2bed02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1060777080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19635,6 +19662,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6686801322492362988, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
   m_PrefabInstance: {fileID: 1533349486}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1195381575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195381571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f295636f06ad6d543aa70876af2bed02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1204974872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19694,7 +19733,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6686801322492362988, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1479044785}
   m_SourcePrefab: {fileID: 100100000, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
 --- !u!1 &1221160947
 GameObject:
@@ -23316,6 +23358,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6686801322492362988, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
   m_PrefabInstance: {fileID: 1204974872}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1479044785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479044781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f295636f06ad6d543aa70876af2bed02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1491042155
 GameObject:
   m_ObjectHideFlags: 0
@@ -23500,7 +23554,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6686801322492362988, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1195381575}
   m_SourcePrefab: {fileID: 100100000, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
 --- !u!1 &1538799178
 GameObject:
@@ -29395,6 +29452,11 @@ MonoBehaviour:
   musicSource: {fileID: 107810295}
   introMusic: {fileID: 8300000, guid: cf9f72a588f75014cb38d3f45c1375f1, type: 3}
   mainMusic: {fileID: 0}
+  dialogueSystem: {fileID: 0}
+  dialogueSequence: []
+  playDialogueOnce: 1
+  playSequentially: 1
+  useOldEnemyCounter: 1
 --- !u!114 &2079290933
 MonoBehaviour:
   m_ObjectHideFlags: 0

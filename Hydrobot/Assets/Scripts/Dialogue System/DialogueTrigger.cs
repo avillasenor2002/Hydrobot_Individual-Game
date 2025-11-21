@@ -126,7 +126,9 @@ public class DialogueTrigger2D : MonoBehaviour
     {
         // Only disable ourselves as active
         if (activeTrigger == this)
+        {
             activeTrigger = null;
+        }
     }
 
 #if UNITY_EDITOR
@@ -148,5 +150,5 @@ public class DialogueTrigger2D : MonoBehaviour
             Gizmos.DrawSphere(cir.offset, cir.radius);
         }
     }
-}
 #endif
+}
