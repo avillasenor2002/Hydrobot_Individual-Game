@@ -122,6 +122,17 @@
                 },
                 {
                     "name": "",
+                    "id": "37d72d95-aa1e-43ec-830b-a36160bce85f",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement & Firing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5f71cf05-5a1b-479b-b15d-b048182ac503",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -144,8 +155,8 @@
                 },
                 {
                     "name": "",
-                    "id": "6dcc8871-fa18-4f91-8ded-5275e37ab148",
-                    "path": "<HID::Nintendo If_Hid>/button2",
+                    "id": "aedaf177-7659-4d9b-8eba-1dfa31170e37",
+                    "path": "<Joystick>/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -177,8 +188,19 @@
                 },
                 {
                     "name": "",
-                    "id": "710a2fa6-ef0b-46a6-8d09-6333defc7f4a",
-                    "path": "<HID::Nintendo If_Hid>/trigger",
+                    "id": "6a8c6cf2-6d11-41bc-a09b-c757cb53436d",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Special Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20b9d109-f0a8-4acb-95ac-c7c7a7f65529",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/button10",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -212,6 +234,17 @@
                     "name": "",
                     "id": "47dee3ef-9b6e-4e49-a110-b4f314c354e1",
                     "path": "<HID::Nintendo If_Hid>/button7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "10a2ec29-5793-45c1-838d-e59f71cddf96",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/button12",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
