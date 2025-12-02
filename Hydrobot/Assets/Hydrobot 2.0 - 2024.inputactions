@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Lite2Start",
+                    "type": "Button",
+                    "id": "53e5ef70-6aaf-4e9d-b7ee-bb6b929b1d4a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -249,6 +258,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "54115bad-52d6-4ab0-9c3c-3d458aa2a1c8",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Lite2Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a6fa4b2c-c005-44ad-8864-f1d46c48d6f3",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Lite2Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7e427e9-f520-4a10-b3dc-9e41ab23292d",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Lite2Start",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -615,6 +657,61 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "aae56eac-6a05-42fb-88df-06a02b7c8958",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "c1f7ccc7-c614-4922-a4ee-0152749a89e7",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/hat/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "9b08944a-5e6d-4eb2-b42b-372f08de1f40",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/hat/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "0a531fca-f229-4b28-b708-675456513f24",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/hat/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "2ce59f8d-d7c7-4f35-a188-38d4b4293a1a",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/hat/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "9e92bb26-7e3b-4ec4-b06b-3c8f8e498ddc",
                     "path": "<Gamepad>/buttonEast",
@@ -627,11 +724,33 @@
                 },
                 {
                     "name": "",
+                    "id": "572504d2-5458-4577-aaac-7dcd3e63275a",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "82627dcc-3b13-4ba9-841d-e4b746d6553e",
                     "path": "*/{Cancel}",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae7cdc66-bf54-4228-8513-cc89fc899903",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false

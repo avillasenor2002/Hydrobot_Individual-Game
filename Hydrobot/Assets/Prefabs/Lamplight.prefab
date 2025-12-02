@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7768446475352704065}
   - component: {fileID: 6096010825603698924}
   m_Layer: 0
-  m_Name: Sheild Sprite
+  m_Name: Lamplight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
