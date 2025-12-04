@@ -120,22 +120,11 @@
                 },
                 {
                     "name": "",
-                    "id": "5fe996a4-e7f9-469c-a230-929b4e18f7bd",
-                    "path": "<HID::Nintendo If_Hid>/stick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement & Firing",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "37d72d95-aa1e-43ec-830b-a36160bce85f",
-                    "path": "<Joystick>/stick",
+                    "path": "<HID::8BitDo 8BitDo Lite 2>/stick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Joystick",
                     "action": "Movement & Firing",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -168,7 +157,7 @@
                     "path": "<Joystick>/trigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Joystick",
                     "action": "Freeze",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -201,7 +190,7 @@
                     "path": "<HID::8BitDo 8BitDo Lite 2>/button2",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Joystick",
                     "action": "Special Action",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -212,7 +201,7 @@
                     "path": "<HID::8BitDo 8BitDo Lite 2>/button10",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Joystick",
                     "action": "Special Action",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -241,22 +230,11 @@
                 },
                 {
                     "name": "",
-                    "id": "47dee3ef-9b6e-4e49-a110-b4f314c354e1",
-                    "path": "<HID::Nintendo If_Hid>/button7",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "10a2ec29-5793-45c1-838d-e59f71cddf96",
                     "path": "<HID::8BitDo 8BitDo Lite 2>/button12",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Joystick",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -728,7 +706,7 @@
                     "path": "<HID::8BitDo 8BitDo Lite 2>/trigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Joystick",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -750,7 +728,7 @@
                     "path": "<HID::8BitDo 8BitDo Lite 2>/button2",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Joystick",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
