@@ -9,6 +9,7 @@ public class WaterProjectile : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject splashPrefab;
     [SerializeField] private AudioClip destroySound;
+    [SerializeField] private AudioClip UnderwaterSound;
     [SerializeField] private AudioClip protectedHitSound; // NEW: sound for protected enemies
     [SerializeField] private AudioSource audioSourcePrefab;
     [SerializeField] private int damage = 1;
@@ -64,12 +65,36 @@ public class WaterProjectile : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void Death()
+    {
+        // Instantiate splash effect
+        if (splashPrefab != null)
+            Instantiate(splashPrefab, transform.position, Quaternion.identity);
+
+        // Play destroy sound
+        PlayUWDestroySound();
+
+        // Destroy projectile
+        Destroy(gameObject);
+    }
+
     private void PlayDestroySound()
     {
         if (destroySound != null && audioSourcePrefab != null)
         {
             AudioSource tempAudioSource = Instantiate(audioSourcePrefab, transform.position, Quaternion.identity);
             tempAudioSource.clip = destroySound;
+            tempAudioSource.Play();
+            Destroy(tempAudioSource.gameObject, destroySound.length);
+        }
+    }
+
+    private void PlayUWDestroySound()
+    {
+        if (destroySound != null && audioSourcePrefab != null)
+        {
+            AudioSource tempAudioSource = Instantiate(audioSourcePrefab, transform.position, Quaternion.identity);
+            tempAudioSource.clip = UnderwaterSound;
             tempAudioSource.Play();
             Destroy(tempAudioSource.gameObject, destroySound.length);
         }
