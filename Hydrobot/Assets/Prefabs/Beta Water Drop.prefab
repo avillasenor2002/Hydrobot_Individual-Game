@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3654641f38edf2b45a91c9c335a6ef3c, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,6 +105,7 @@ MonoBehaviour:
   rb: {fileID: 1742340684803182751}
   splashPrefab: {fileID: 3324559716137053015, guid: 7e060e78e52cf124c926fa4722f82991, type: 3}
   destroySound: {fileID: 8300000, guid: 2ec8789b92f88e4469f2671c929417f7, type: 3}
+  UnderwaterSound: {fileID: 0}
   protectedHitSound: {fileID: 8300000, guid: 70da292ce3783474e93facf20981d650, type: 3}
   audioSourcePrefab: {fileID: 1240373640627511473, guid: 11834944ffa535d4caa3dfe7361c4605, type: 3}
   damage: 1

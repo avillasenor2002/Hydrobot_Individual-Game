@@ -48,6 +48,17 @@ public class PlayerRotation : MonoBehaviour
     {
         moveInputValue = value.Get<Vector2>();
 
+        // Check for invert stick preference from PlayerSettingsManager
+        if (PlayerSettingsManager.Instance != null)
+        {
+            bool invert = PlayerSettingsManager.Instance.invertStick;
+            // Invert the input if the toggle is OFF (invert stick = false)
+            if (!invert)
+            {
+                moveInputValue = -moveInputValue;
+            }
+        }
+
         // Rumble ONLY when moving AND special mode is active
         if (Gamepad.current != null)
         {
@@ -63,6 +74,7 @@ public class PlayerRotation : MonoBehaviour
             }
         }
     }
+
 
     private void StopVibration()
     {
@@ -90,6 +102,11 @@ public class PlayerRotation : MonoBehaviour
     }
 
     public void OnSpecialAction() => isSpecial = !isSpecial;
+    public bool IsMoving => moveInputValue.sqrMagnitude > 0.01f;
+    public Vector2 MoveInput => -moveInputValue;
+    public Vector2 GetMoveInput() => moveInputValue;
+
+
 
     private void Update()
     {

@@ -11,19 +11,24 @@ public class ProjectileShoot : MonoBehaviour
         public GameObject projectilePrefab;
         public float projectileSpeed;
         public float waterLoss;
-        public Sprite hydroNormalSprite;
-        public Sprite hydroFreezeSprite;
+
+        // Updated: four sprite variants
+        public Sprite hydroNormalIdle;
+        public Sprite hydroNormalMove;
+        public Sprite hydroFreezeIdle;
+        public Sprite hydroFreezeMove;
+
         public float maxSpeed;
         public float maxDashSpeed;
     }
 
-    [SerializeField] private List<ProjectileMode> projectileModes; // List of projectile modes
+    [SerializeField] private List<ProjectileMode> projectileModes;
     [SerializeField] private Transform shootingPoint;
     [SerializeField] private WaterTank waterTotal;
     [SerializeField] private PlayerRotation player;
-    [SerializeField] private PlayerSprite playerSprite; // Reference to PlayerSprite script
-    [SerializeField] private AudioClip shootSound; // Assign shooting sound in Inspector
-    [SerializeField] private AudioSource audioSource; // Assign AudioSource in Inspector
+    [SerializeField] private PlayerSprite playerSprite;
+    [SerializeField] private AudioClip shootSound;
+    [SerializeField] private AudioSource audioSource;
 
     private int currentModeIndex = 0;
 
@@ -41,7 +46,7 @@ public class ProjectileShoot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P)) // Press P to switch modes
+        if (Input.GetKeyDown(KeyCode.P))
         {
             SwitchMode();
         }
@@ -64,7 +69,6 @@ public class ProjectileShoot : MonoBehaviour
                 rb.velocity = transform.up * currentMode.projectileSpeed;
             }
 
-            // Play shooting sound
             if (audioSource != null && shootSound != null)
             {
                 audioSource.PlayOneShot(shootSound);
@@ -90,7 +94,13 @@ public class ProjectileShoot : MonoBehaviour
         if (playerSprite != null && projectileModes.Count > 0)
         {
             ProjectileMode currentMode = projectileModes[currentModeIndex];
-            playerSprite.SetHydroSprites(currentMode.hydroNormalSprite, currentMode.hydroFreezeSprite);
+
+            playerSprite.SetHydroSprites(
+                currentMode.hydroNormalIdle,
+                currentMode.hydroNormalMove,
+                currentMode.hydroFreezeIdle,
+                currentMode.hydroFreezeMove
+            );
         }
     }
 }

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDrop
-  m_Shader: {fileID: 4800000, guid: 329b60cce600a8641b4a96b0e69e6c1d, type: 3}
+  m_Name: Character Sprites 2
+  m_Shader: {fileID: 4800000, guid: 156bd4057b65e634cbfcf70397325616, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -61,16 +61,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Aberration: 0.3
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DistortSpeed: 0.31
-    - _DistortStrength: 0.0006
-    - _DistortionStrength: 0.05
     - _DstBlend: 0
-    - _EdgeIntensity: 3
-    - _EdgeThickness: 0.05
-    - _EdgeWidth: 0.25
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -78,19 +73,20 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RefractionStrength: 0.0798
-    - _RimIntensity: 2
-    - _RimSize: 0.3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TrailFade: 0
-    - _Transparency: 0.334
+    - _Threshold: 0.15
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeColor: {r: 1, g: 1, b: 1, a: 0.6156863}
+    - _Color: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Tint: {r: 0.3443396, g: 0.9287539, b: 1, a: 1}
+    - _KeyColor: {r: 0.91372555, g: 0.8313726, b: 0.6666667, a: 1}
+    - _KeyColor0: {r: 0, g: 0.40000004, b: 0.31764707, a: 1}
+    - _KeyColor1: {r: 0, g: 0.40000004, b: 0.31764707, a: 1}
+    - _KeyColor2: {r: 0.09411766, g: 0.078431375, b: 0.14509805, a: 1}
+    - _KeyColor3: {r: 0, g: 0.40000004, b: 0.31764707, a: 1}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
+    - _ShadowOffset: {r: 0.1, g: -0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
