@@ -103,3 +103,5 @@ MonoBehaviour:
   upwardForce: 1
   gravity: -1.5
   fadeDuration: 4
+  spawnSFX: {fileID: 8300000, guid: 1ee13692d93906a44a855ec3cd25976c, type: 3}
+  sfxTag: SFX

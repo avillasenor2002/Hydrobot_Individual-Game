@@ -6,17 +6,21 @@ using UnityEngine;
 public class FreedReadyBot : MonoBehaviour
 {
     [Header("Scale Pulse")]
-    public float pulseScale = 1.2f;         // Scale size at peak of pulse
-    public float pulseDuration = 0.2f;      // Time to reach pulse peak
-    public float returnDuration = 0.2f;     // Time to shrink back to original size
+    public float pulseScale = 1.2f;
+    public float pulseDuration = 0.2f;
+    public float returnDuration = 0.2f;
 
     [Header("Movement")]
-    public float upwardForce = 2f;          // Initial upward push
-    public float gravity = -4f;             // Simulated gravity pull
+    public float upwardForce = 2f;
+    public float gravity = -4f;
 
     [Header("Fade Out")]
-    public float fadeDuration = 1f;         // How long it takes to fade away
+    public float fadeDuration = 1f;
 
+    [Header("Audio")]
+    public AudioClip spawnSFX;        // Sound played when spawned
+
+    private AudioSource localSource;  // AudioSource attached dynamically
     private SpriteRenderer sr;
     private Vector3 originalScale;
     private float verticalVelocity = 0f;
@@ -30,6 +34,15 @@ public class FreedReadyBot : MonoBehaviour
 
         // Initial upward movement
         verticalVelocity = upwardForce;
+
+        // Create dedicated AudioSource
+        CreateLocalAudioSource();
+
+        // Play spawn SFX
+        if (localSource != null && spawnSFX != null)
+        {
+            localSource.PlayOneShot(spawnSFX, 1f);   // Full volume
+        }
     }
 
     void Update()
@@ -51,6 +64,15 @@ public class FreedReadyBot : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void CreateLocalAudioSource()
+    {
+        localSource = gameObject.AddComponent<AudioSource>();
+        localSource.playOnAwake = false;
+        localSource.spatialBlend = 0f;   // 2D sound
+        localSource.volume = 1f;
+        localSource.pitch = 1f;
     }
 
     IEnumerator PulseRoutine()
