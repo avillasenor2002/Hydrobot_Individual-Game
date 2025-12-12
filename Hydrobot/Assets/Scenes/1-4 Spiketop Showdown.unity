@@ -8876,7 +8876,8 @@ PrefabInstance:
       propertyPath: targetTilemap
       value: 
       objectReference: {fileID: 2020137700}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2202643051230876442, guid: 44f0f0daf4affcb47a31cccdcd9a3f67, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19003,6 +19004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
+  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: e9a79ee8375d2774bacefcf358f41d12, type: 2}
   triggerOnce: 1
@@ -20237,6 +20239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
+  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: 94baa2378a8fb104eb90b3b47e7b5ad7, type: 2}
   - {fileID: 11400000, guid: 2aa3f4eda15c6d048ba680484b184ef7, type: 2}
@@ -21987,6 +21990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
+  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: 8572649972acbb84699c6059599e2d88, type: 2}
   triggerOnce: 1
@@ -24309,6 +24313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
+  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: 4b5bd0d999b49cc48b5356df4a4ec26a, type: 2}
   triggerOnce: 1

@@ -76,11 +76,11 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Threshold: 0.15
+    - _Threshold: 0.031
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+    - _Color: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _KeyColor: {r: 0.91372555, g: 0.8313726, b: 0.6666667, a: 1}
     - _KeyColor0: {r: 0, g: 0.40000004, b: 0.31764707, a: 1}

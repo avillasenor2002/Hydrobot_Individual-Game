@@ -5853,7 +5853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '0-0: Training Zone'
+  m_text: '0-0: Calibration Day'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41849ea5bcf168a4b86f62a8c5b27977, type: 2}
   m_sharedMaterial: {fileID: 7563176883448720412, guid: 41849ea5bcf168a4b86f62a8c5b27977, type: 2}
@@ -12203,7 +12203,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 0-0 Tutorial
+          m_StringArgument: 0-0 Calibration Day
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1450871924

@@ -44799,11 +44799,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2011367476123260142, guid: 01d110b1259b91f40b1893f763d93d40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.34
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 2011367476123260142, guid: 01d110b1259b91f40b1893f763d93d40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20.92
+      value: 4.03
       objectReference: {fileID: 0}
     - target: {fileID: 2011367476123260142, guid: 01d110b1259b91f40b1893f763d93d40, type: 3}
       propertyPath: m_LocalPosition.z
@@ -44893,6 +44893,10 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1610179112}
+    - target: {fileID: 5818899005525667899, guid: 01d110b1259b91f40b1893f763d93d40, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

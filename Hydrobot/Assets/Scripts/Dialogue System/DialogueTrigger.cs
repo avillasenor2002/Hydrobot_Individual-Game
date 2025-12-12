@@ -4,7 +4,8 @@ using UnityEngine;
 public class DialogueTrigger2D : MonoBehaviour
 {
     [Header("References")]
-    public DialogueSystem dialogueSystem;
+    public DialogueSystem dialogueSystem;               // Original system
+    public DialogueSystemFreeze dialogueSystemFreeze;   // New freeze system
     public DialogueData[] dialogueSequence;
 
     [Header("Options")]
@@ -26,11 +27,15 @@ public class DialogueTrigger2D : MonoBehaviour
         if (col != null && !col.isTrigger)
             Debug.LogWarning($"[DialogueTrigger2D] Collider on '{name}' is not set to IsTrigger!");
 
-        if (dialogueSystem == null)
+        if (dialogueSystem == null && dialogueSystemFreeze == null)
         {
             dialogueSystem = FindObjectOfType<DialogueSystem>();
             if (dialogueSystem == null)
-                Debug.LogWarning($"[DialogueTrigger2D] No DialogueSystem found in scene.");
+            {
+                dialogueSystemFreeze = FindObjectOfType<DialogueSystemFreeze>();
+                if (dialogueSystemFreeze == null)
+                    Debug.LogWarning($"[DialogueTrigger2D] No DialogueSystem or DialogueSystemFreeze found in scene.");
+            }
         }
     }
 
@@ -41,12 +46,22 @@ public class DialogueTrigger2D : MonoBehaviour
             dialogueSystem.OnDialogueFinished += HandleDialogueFinished;
             listening = true;
         }
+        else if (dialogueSystemFreeze != null)
+        {
+            dialogueSystemFreeze.OnDialogueFinished += HandleDialogueFinished;
+            listening = true;
+        }
     }
 
     private void OnDisable()
     {
-        if (dialogueSystem != null && listening)
-            dialogueSystem.OnDialogueFinished -= HandleDialogueFinished;
+        if (listening)
+        {
+            if (dialogueSystem != null)
+                dialogueSystem.OnDialogueFinished -= HandleDialogueFinished;
+            if (dialogueSystemFreeze != null)
+                dialogueSystemFreeze.OnDialogueFinished -= HandleDialogueFinished;
+        }
 
         if (activeTrigger == this)
             activeTrigger = null;
@@ -58,13 +73,8 @@ public class DialogueTrigger2D : MonoBehaviour
     {
         if (!other.CompareTag(playerTag)) return;
 
-        // If already active, DO NOT restart
-        if (activeTrigger == this)
-            return;
-
-        // If already completed and one-shot, DO NOT restart
-        if (hasTriggered && triggerOnce)
-            return;
+        if (activeTrigger == this) return;
+        if (hasTriggered && triggerOnce) return;
 
         StartSequenceFromThisTrigger();
     }
@@ -79,31 +89,35 @@ public class DialogueTrigger2D : MonoBehaviour
 
     private void StartSequenceFromThisTrigger()
     {
-        if (dialogueSystem == null || dialogueSequence == null || dialogueSequence.Length == 0)
+        if ((dialogueSystem == null && dialogueSystemFreeze == null) || dialogueSequence == null || dialogueSequence.Length == 0)
             return;
 
-        // Mark immediately so it can NEVER refire during playback
         if (triggerOnce)
             hasTriggered = true;
 
-        // Override any previous trigger
         activeTrigger = this;
-
         currentIndex = 0;
+
         PlayLine(currentIndex);
     }
 
     private void PlayLine(int index)
     {
         index = Mathf.Clamp(index, 0, dialogueSequence.Length - 1);
-        dialogueSystem.ShowDialogue(dialogueSequence[index]);
+
+        if (dialogueSystem != null)
+        {
+            dialogueSystem.ShowDialogue(dialogueSequence[index]);
+        }
+        else if (dialogueSystemFreeze != null)
+        {
+            dialogueSystemFreeze.StartDialogue(new DialogueData[] { dialogueSequence[index] });
+        }
     }
 
     private void HandleDialogueFinished()
     {
-        // Only respond if we are the current trigger
-        if (activeTrigger != this)
-            return;
+        if (activeTrigger != this) return;
 
         if (!playSequentially)
         {
@@ -124,7 +138,6 @@ public class DialogueTrigger2D : MonoBehaviour
 
     private void FinishTrigger()
     {
-        // Only disable ourselves as active
         if (activeTrigger == this)
         {
             activeTrigger = null;
