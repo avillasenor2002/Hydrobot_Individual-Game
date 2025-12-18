@@ -751,7 +751,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8e3731dd7d7f43544a4e45181376d601, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0b564663d7b8cd54da1b922763c9075b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -28650,6 +28650,7 @@ MonoBehaviour:
   gameOverMusic: {fileID: 8300000, guid: 5093fd531a281b846be8c0c898089bf6, type: 3}
   gameOverFirstSelected: {fileID: 163679719}
   levelEndFirstSelected: {fileID: 291514881}
+  currentLevelIndex: 0
 --- !u!114 &2079290934
 MonoBehaviour:
   m_ObjectHideFlags: 0
