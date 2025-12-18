@@ -32832,6 +32832,7 @@ MonoBehaviour:
   gameOverMusic: {fileID: 8300000, guid: 5093fd531a281b846be8c0c898089bf6, type: 3}
   gameOverFirstSelected: {fileID: 163679719}
   levelEndFirstSelected: {fileID: 291514881}
+  currentLevelIndex: 4
 --- !u!114 &2079290934
 MonoBehaviour:
   m_ObjectHideFlags: 0

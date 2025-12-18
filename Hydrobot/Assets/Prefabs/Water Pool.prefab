@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaterTank: {fileID: 0}
   WaterRetore: 0
-  WaterRestoreTotal: 0.75
+  WaterRestoreTotal: 2.75
   playerRB: {fileID: 0}
   BoyancyRise: 10
   Boyancygrav: 20

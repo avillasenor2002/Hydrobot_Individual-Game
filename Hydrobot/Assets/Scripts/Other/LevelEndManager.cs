@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-
 public class LevelEndManager : MonoBehaviour
 {
     [Header("UI Elements")]
@@ -28,10 +27,12 @@ public class LevelEndManager : MonoBehaviour
     [SerializeField] private GameObject gameOverFirstSelected;
     [SerializeField] private GameObject levelEndFirstSelected;
 
-
     private Image rootImage;
     private Image[] childImages;
     private Text[] childTexts;
+
+    [Header("Level Settings")]
+    [SerializeField] private int currentLevelIndex = 0; // 0-based index for this level
 
     private void Start()
     {
@@ -50,11 +51,28 @@ public class LevelEndManager : MonoBehaviour
 
     public void TriggerLevelEnd()
     {
+        // Mark level as complete and unlock next level
+        MarkLevelComplete();
+
         StartCoroutine(HandleLevelEndSequence());
     }
+
     public void TriggerGameOver()
     {
         StartCoroutine(HandleGameOverSequence());
+    }
+
+    private void MarkLevelComplete()
+    {
+        // Mark current level as complete in PlayerPrefs
+        PlayerPrefs.SetInt($"Level{currentLevelIndex}Complete", 1);
+        PlayerPrefs.Save();
+
+        // Unlock the next level (handled by PlayerSettingsManager)
+        if (PlayerSettingsManager.Instance != null)
+        {
+            PlayerSettingsManager.Instance.UpdateLevelSelectLock();
+        }
     }
 
     private IEnumerator HandleGameOverSequence()
@@ -107,9 +125,7 @@ public class LevelEndManager : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(gameOverFirstSelected);
         }
-
     }
-
 
     private IEnumerator HandleLevelEndSequence()
     {
@@ -124,7 +140,7 @@ public class LevelEndManager : MonoBehaviour
 
         // Apply slow motion
         Time.timeScale = slowTimeScale;
-        yield return new WaitForSecondsRealtime(slowDuration); // Unaffected by time scale
+        yield return new WaitForSecondsRealtime(slowDuration);
 
         // Begin UI fade-in
         if (endUIRoot != null)
@@ -136,7 +152,7 @@ public class LevelEndManager : MonoBehaviour
         // Freeze gameplay
         Time.timeScale = 0f;
 
-        // Wait for the first music clip to finish playing
+        // Wait for first music clip to finish
         if (musicSource != null && loopingMusic != null)
         {
             while (musicSource.isPlaying)
@@ -154,7 +170,6 @@ public class LevelEndManager : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(levelEndFirstSelected);
         }
-
     }
 
     private IEnumerator FadeInUI()
