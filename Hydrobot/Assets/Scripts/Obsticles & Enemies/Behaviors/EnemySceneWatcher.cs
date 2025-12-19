@@ -2,35 +2,49 @@ using UnityEngine;
 
 public class EnemySceneWatcher : MonoBehaviour
 {
-    [Header("Object to Zero HP When No Enemies Remain")]
-    public Enemy targetEnemy; // The enemy whose HP will be set to 0
+    [Header("Level End")]
+    [SerializeField] private LevelEndManager levelEndManager;
 
     [Header("Enemy Detection")]
-    public bool useEnemyComponent = true; // If true, checks for Enemy component
-    public bool useTag = false;           // Optional: check by tag
-    public string enemyTag = "Enemy";     // Tag to check if useTag is true
+    [SerializeField] private bool useEnemyComponent = true;
+    [SerializeField] private bool useTag = false;
+    [SerializeField] private string enemyTag = "Enemy";
+
+    private bool hasTriggeredEnd = false;
 
     private void Update()
     {
-        bool anyEnemies = false;
+        if (hasTriggeredEnd) return;
+
+        bool enemiesRemain = false;
 
         if (useEnemyComponent)
         {
             Enemy[] enemies = FindObjectsOfType<Enemy>();
-            if (enemies.Length > 0)
-                anyEnemies = true;
+            foreach (Enemy e in enemies)
+            {
+                if (!e.isDead)
+                {
+                    enemiesRemain = true;
+                    break;
+                }
+            }
         }
 
-        if (useTag)
+        if (!enemiesRemain && useTag)
         {
-            GameObject[] enemiesByTag = GameObject.FindGameObjectsWithTag(enemyTag);
-            if (enemiesByTag.Length > 0)
-                anyEnemies = true;
+            if (GameObject.FindGameObjectsWithTag(enemyTag).Length > 0)
+                enemiesRemain = true;
         }
 
-        if (!anyEnemies && targetEnemy != null && !targetEnemy.isDead)
+        if (!enemiesRemain)
         {
-            targetEnemy.TakeDamage(targetEnemy.health); // Reduce HP to 0
+            hasTriggeredEnd = true;
+
+            if (levelEndManager != null)
+                levelEndManager.TriggerLevelEnd();
+            else
+                Debug.LogError("[EnemySceneWatcher] LevelEndManager not assigned.");
         }
     }
 }
