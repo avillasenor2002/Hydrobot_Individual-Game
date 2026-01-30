@@ -2326,7 +2326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
-  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: 6fc9c4507fc06e24ab99954324f5635a, type: 2}
   triggerOnce: 1
@@ -8655,7 +8654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
-  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: b32338c2779c7214b9e7f59e90d03475, type: 2}
   triggerOnce: 1
@@ -8805,7 +8803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
-  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: ae39a76e36f1c0e4dbe5df75327b030e, type: 2}
   triggerOnce: 1
@@ -9180,7 +9177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
-  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: 77b392586a4c9f04eb5aeed8204860bf, type: 2}
   - {fileID: 11400000, guid: 4fc3414926ecd84428a664ca1089510e, type: 2}
@@ -9548,7 +9544,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
-  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: f76728326ca1bdf4c8b9fdfad8a826aa, type: 2}
   - {fileID: 11400000, guid: 3e907c6879805154cbd687dd1f12e5da, type: 2}
@@ -19434,63 +19429,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57ba0eb7bc352514a9d41b57ac49a4f0, type: 3}
---- !u!1001 &1219204977
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 647145137800023745, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_Name
-      value: Water Bottle (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.467474
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -10.920631
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016811166116073682, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ebefd5538d54c2b41aa2a25720229099, type: 3}
 --- !u!1 &1221160947
 GameObject:
   m_ObjectHideFlags: 0
@@ -29967,7 +29905,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
-  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: 452026ad64a4e5b4dbfb9a7cb2d84126, type: 2}
   triggerOnce: 1
@@ -31262,7 +31199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
-  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: d9380b910ed83e442b7b4db847e32e3e, type: 2}
   triggerOnce: 1
@@ -38353,7 +38289,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1140644684}
-  dialogueSystemFreeze: {fileID: 0}
   dialogueSequence:
   - {fileID: 11400000, guid: b961f5b9a6802a84cb43d4df02b759ba, type: 2}
   triggerOnce: 1
@@ -38801,7 +38736,6 @@ MonoBehaviour:
   gameOverMusic: {fileID: 8300000, guid: 5093fd531a281b846be8c0c898089bf6, type: 3}
   gameOverFirstSelected: {fileID: 163679719}
   levelEndFirstSelected: {fileID: 291514881}
-  currentLevelIndex: 3
 --- !u!114 &2079290934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39478,4 +39412,3 @@ SceneRoots:
   - {fileID: 616385978}
   - {fileID: 2137656831}
   - {fileID: 974880049}
-  - {fileID: 1219204977}
