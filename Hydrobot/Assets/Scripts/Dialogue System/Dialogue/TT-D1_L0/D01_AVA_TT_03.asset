@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueText: "Use the Left Stick to propel yourself with water. \nTry to fly to
     the red zones!"
   characterName: Professor Avalon
-  characterIcon: {fileID: 21300000, guid: 4789614c6031b204195e6ddf21f4cf03, type: 3}
+  characterIcon: {fileID: 21300000, guid: a952cf387dec4f14f9f6a1900a73eb88, type: 3}
   textSpeed: 0.025
   autoHideTime: 3
