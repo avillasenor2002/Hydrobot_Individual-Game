@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueText: Alrighty Hydrobot, it's calibration day and you know what that means!
     Testing time!
   characterName: Professor Avalon
-  characterIcon: {fileID: 21300000, guid: a952cf387dec4f14f9f6a1900a73eb88, type: 3}
+  characterIcon: {fileID: 21300000, guid: cfcb68eede0c4914f8884c43460c6093, type: 3}
   textSpeed: 0.025
   autoHideTime: 3

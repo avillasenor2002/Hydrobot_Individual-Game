@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueText: No idea how they got in here, but teach these jerks some manners
     Hydro!
   characterName: Professor Avalon
-  characterIcon: {fileID: 21300000, guid: a952cf387dec4f14f9f6a1900a73eb88, type: 3}
+  characterIcon: {fileID: 21300000, guid: d02801ded796f5244ba185ead12b4807, type: 3}
   textSpeed: 0.025
   autoHideTime: 3

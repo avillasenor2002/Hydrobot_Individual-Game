@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: OH MY GOD SCRAPPERS!
   characterName: Professor Avalon
-  characterIcon: {fileID: 21300000, guid: a952cf387dec4f14f9f6a1900a73eb88, type: 3}
+  characterIcon: {fileID: 21300000, guid: 02e56ca3afd4b6742977399b53bdc116, type: 3}
   textSpeed: 0.03
   autoHideTime: 3

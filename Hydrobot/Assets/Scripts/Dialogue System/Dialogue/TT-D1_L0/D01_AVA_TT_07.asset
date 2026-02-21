@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueText: Next lets test your hover. You can stop yourself in place by hitting
     the "A" Button!
   characterName: Professor Avalon
-  characterIcon: {fileID: 21300000, guid: a952cf387dec4f14f9f6a1900a73eb88, type: 3}
+  characterIcon: {fileID: 21300000, guid: e0b84f9f7c9a9e347a53fe2c477b428e, type: 3}
   textSpeed: 0.025
   autoHideTime: 3
