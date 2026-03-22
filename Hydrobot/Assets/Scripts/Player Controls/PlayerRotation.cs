@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,8 +10,8 @@ public class PlayerRotation : MonoBehaviour
     [SerializeField] private float forceMagnitude = 10f;
     [SerializeField] public float maxSpeed = 5f;
     [SerializeField] private float gravityReturnSpeed = 0.5f;
-    [SerializeField] private float bobbingFrequency = 2f;    // How fast the bobbing happens
-    [SerializeField] private float bobbingAmplitude = 0.1f;  // How high/low the bobbing is
+    [SerializeField] private float bobbingFrequency = 2f;
+    [SerializeField] private float bobbingAmplitude = 0.1f;
     private Vector2 moveInputValue;
     public bool isFreeze = false;
     public bool isSpecial = false;
@@ -31,13 +30,16 @@ public class PlayerRotation : MonoBehaviour
     [SerializeField] public float dashShootCooldown = 0.5f;
     [SerializeField] public ParticleSystem freezePart;
 
-    [SerializeField] private GameObject playerVisual; // The separate visual object to destroy
-    [SerializeField] private ParticleSystem deathEffect; // The death particle effect
-    [SerializeField] private LevelEndManager levelEndManager; // Reference to LevelEndManager
-    [SerializeField] private string groundTag = "Ground"; // Tag for the ground
+    [SerializeField] private GameObject playerVisual;
+    [SerializeField] private ParticleSystem deathEffect;
+    [SerializeField] private LevelEndManager levelEndManager;
+    [SerializeField] private string groundTag = "Ground";
     [SerializeField] private AudioClip deathSound;
-    [SerializeField] private AudioSource sfxSource; // Typically the SFX AudioSource in scene
+    [SerializeField] private AudioSource sfxSource;
 
+    // FIX: track the active ReturnGravity coroutine so we can stop it before
+    // starting a new one, preventing stacked coroutines from compounding gravityScale
+    private Coroutine returnGravityRoutine;
 
     private void Start()
     {
@@ -48,18 +50,13 @@ public class PlayerRotation : MonoBehaviour
     {
         moveInputValue = value.Get<Vector2>();
 
-        // Check for invert stick preference from PlayerSettingsManager
         if (PlayerSettingsManager.Instance != null)
         {
             bool invert = PlayerSettingsManager.Instance.invertStick;
-            // Invert the input if the toggle is OFF (invert stick = false)
             if (!invert)
-            {
                 moveInputValue = -moveInputValue;
-            }
         }
 
-        // Rumble ONLY when moving AND special mode is active
         if (Gamepad.current != null)
         {
             if (moveInputValue.sqrMagnitude > 0.01f && isSpecial)
@@ -69,19 +66,15 @@ public class PlayerRotation : MonoBehaviour
             }
             else
             {
-                // Ensure vibration turns off when not moving or not special
                 Gamepad.current.SetMotorSpeeds(0f, 0f);
             }
         }
     }
 
-
     private void StopVibration()
     {
         if (Gamepad.current != null)
-        {
-            Gamepad.current.SetMotorSpeeds(0f, 0f);  // Stop vibration
-        }
+            Gamepad.current.SetMotorSpeeds(0f, 0f);
     }
 
     private void OnFreeze()
@@ -90,14 +83,23 @@ public class PlayerRotation : MonoBehaviour
 
         if (isFreeze)
         {
+            // FIX: cancel any in-progress gravity return before zeroing velocity.
+            // Without this, the coroutine keeps running after freeze re-engages and
+            // fights with gravityScale = 0, causing erratic launches on unfreeze.
+            if (returnGravityRoutine != null)
+            {
+                StopCoroutine(returnGravityRoutine);
+                returnGravityRoutine = null;
+            }
+
             rb2D.velocity = Vector2.zero;
             rb2D.angularVelocity = 0f;
             rb2D.gravityScale = 0f;
-            bobbingTime = 0f;  // Reset the bobbing time when freezing starts
+            bobbingTime = 0f;
         }
         else
         {
-            StartCoroutine(ReturnGravity());
+            returnGravityRoutine = StartCoroutine(ReturnGravity());
         }
     }
 
@@ -106,15 +108,12 @@ public class PlayerRotation : MonoBehaviour
     public Vector2 MoveInput => -moveInputValue;
     public Vector2 GetMoveInput() => moveInputValue;
 
-
-
     private void Update()
     {
         RotateLogicMethod();
 
         if (isFreeze)
         {
-            // Bobbing up and down effect when frozen
             BobbingEffect();
             freezePart.Play();
         }
@@ -129,19 +128,22 @@ public class PlayerRotation : MonoBehaviour
         if (waterTotal.currentWater <= 0)
         {
             isFreeze = false;
-            StartCoroutine(ReturnGravity());
+            // FIX: same guard here — if water drains to zero mid-freeze,
+            // stop any existing coroutine before starting a fresh one
+            if (returnGravityRoutine != null)
+            {
+                StopCoroutine(returnGravityRoutine);
+                returnGravityRoutine = null;
+            }
+            returnGravityRoutine = StartCoroutine(ReturnGravity());
         }
 
         ApplyForce();
 
         if (!isFreeze)
-        {
             LimitSpeed();
-        }
         else
-        {
-            waterTotal.currentWater = waterTotal.currentWater - freezeWaterLoss;
-        }
+            waterTotal.currentWater -= freezeWaterLoss;
     }
 
     private void RotateLogicMethod()
@@ -167,13 +169,9 @@ public class PlayerRotation : MonoBehaviour
                 if (!isFreeze)
                 {
                     if (isSpecial == false)
-                    {
                         rb2D.AddForce(-transform.up * forceMagnitude, ForceMode2D.Force);
-                    }
                     else if (isSpecial == true)
-                    {
                         rb2D.AddForce(-transform.up * dashForceMagnitude, ForceMode2D.Force);
-                    }
 
                     if (isSpecial == false && Time.time >= lastShootTime + shootCooldown)
                     {
@@ -193,13 +191,9 @@ public class PlayerRotation : MonoBehaviour
     private void LimitSpeed()
     {
         if (isSpecial == false && rb2D.velocity.magnitude > maxSpeed)
-        {
             rb2D.velocity = rb2D.velocity.normalized * maxSpeed;
-        }
         else if (isSpecial == true && rb2D.velocity.magnitude > maxDashSpeed)
-        {
             rb2D.velocity = rb2D.velocity.normalized * maxDashSpeed;
-        }
     }
 
     private IEnumerator ReturnGravity()
@@ -211,14 +205,13 @@ public class PlayerRotation : MonoBehaviour
         }
 
         rb2D.gravityScale = originalGravityScale;
+        returnGravityRoutine = null;
     }
 
     private void BobbingEffect()
     {
-        // Increment the bobbing time
         bobbingTime += Time.deltaTime * bobbingFrequency;
 
-        // Apply bobbing effect to the position using a sine wave
         float newY = Mathf.Sin(bobbingTime) * bobbingAmplitude;
         transform.position = new Vector3(transform.position.x, transform.position.y + newY, transform.position.z);
 
@@ -248,39 +241,44 @@ public class PlayerRotation : MonoBehaviour
         bool hitGround = collision.gameObject.CompareTag(groundTag);
         bool hitEnemy = collision.gameObject.GetComponent<Enemy>() != null;
 
+        // FIX: if frozen when an enemy makes contact, cancel the freeze so gravity
+        // and velocity are restored before the impulse is applied — prevents the
+        // player being launched by a collision against a stationary or moving enemy
+        if (hitEnemy && isFreeze)
+        {
+            isFreeze = false;
+            rb2D.velocity = Vector2.zero;
+            rb2D.angularVelocity = 0f;
+            if (returnGravityRoutine != null)
+            {
+                StopCoroutine(returnGravityRoutine);
+                returnGravityRoutine = null;
+            }
+            returnGravityRoutine = StartCoroutine(ReturnGravity());
+        }
+
         if ((hitGround || hitEnemy) && waterTotal.currentWater <= 0)
         {
+            rb2D.velocity = Vector2.zero;
+            rb2D.angularVelocity = 0f;
             HandlePlayerDeath();
         }
     }
 
     private void HandlePlayerDeath()
     {
-        // Destroy visual sprite
         if (playerVisual != null)
-        {
             Destroy(playerVisual);
-        }
 
-        // Play death sound
         if (sfxSource != null && deathSound != null)
-        {
             sfxSource.PlayOneShot(deathSound);
-        }
 
-        // Play death particle effect
         if (deathEffect != null)
-        {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-        }
 
-        // Notify the LevelEndManager
         if (levelEndManager != null)
-        {
             levelEndManager.TriggerGameOver();
-        }
 
         Destroy(gameObject);
     }
-
 }

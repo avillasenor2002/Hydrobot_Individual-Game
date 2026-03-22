@@ -9,11 +9,21 @@ public class ProjectileBehavior : EnemyBehavior
     public float shrinkAmount = 0.15f;
     public float minimumScaleBeforeDeath = 0.25f;
 
-    // Called by ProjectileMono
+    [Header("Collision")]
+    public string groundTag = "Ground"; // Must match the tag used on ground objects
+
+    // Called by ProjectileMono in FixedUpdate
     public void Execute(ProjectileMono projectile)
     {
         projectile.transform.position += (Vector3)projectile.GetDirection() * speed * Time.fixedDeltaTime;
         projectile.transform.Rotate(0f, 0f, rotationSpeed * Time.fixedDeltaTime);
+    }
+
+    // Called by ProjectileMono from OnCollisionEnter2D / OnTriggerEnter2D
+    public void OnGroundHit(ProjectileMono projectile, GameObject other)
+    {
+        if (other.CompareTag(groundTag))
+            Object.Destroy(projectile.gameObject);
     }
 
     // Called when hit by water projectile
@@ -21,9 +31,8 @@ public class ProjectileBehavior : EnemyBehavior
     {
         Vector3 scale = enemy.transform.localScale;
         scale -= Vector3.one * shrinkAmount;
-
         if (scale.x <= minimumScaleBeforeDeath || scale.y <= minimumScaleBeforeDeath)
-            enemy.TakeDamage(9999); // kill
+            enemy.TakeDamage(9999);
         else
             enemy.transform.localScale = scale;
     }
