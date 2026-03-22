@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4350530400810695067}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11, y: -6.71, z: 0}
+  m_LocalPosition: {x: -1.5, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e2be4fd9d0007541a7e711129aa9ff6, type: 2}
+  - {fileID: 2100000, guid: 0cf0dfb93986f0341b1c9d96c0c72e9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   behavior: {fileID: 0}
   isBeingInhaled: 0
   isDead: 0
-  col: {fileID: 0}
+  col: {fileID: 7362960109357758215}
   isInvincible: 0
   invincibilityTimer: 0
   IsFiring: 0

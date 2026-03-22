@@ -17,13 +17,13 @@ MonoBehaviour:
   noticeSound: {fileID: 8300000, guid: 5ead85aca59c9e54699cdd480cde2170, type: 3}
   noticePulseScale: 0.25
   noticePulseDuration: 0.25
-  hpLossPerGrowth: 4
+  hpLossPerGrowth: 5
   growthPerStep: 0.165
   growthSound: {fileID: 8300000, guid: 573d57be372ea464cb51a7e5a74dae31, type: 3}
   growthPulseScale: 0.18
   growthAnimDuration: 0.35
   overshootPercent: 0.1
-  replacementPrefab: {fileID: 2921696438611758933, guid: 7b907a27fed3b5f448127a7f627a335a, type: 3}
+  replacementPrefab: {fileID: 7952853682642573646, guid: b7df204e43f55ef4ab76c7fea281ae5e, type: 3}
   blueShiftPerStep: 0.15
   idleSquishAmount: 0.003
   moveSquishAmount: 0.01

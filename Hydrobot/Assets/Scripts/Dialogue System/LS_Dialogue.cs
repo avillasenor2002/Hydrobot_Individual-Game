@@ -25,10 +25,21 @@ public class DialogueSystemFreeze : MonoBehaviour
     public float pulseSpeed = 2f;
     public float pulseAmplitude = 0.2f;
 
+    [Header("Voice Sounds")]
+    public AudioSource audioSource;
+    public AudioClip[] voiceSounds;          // Pool of clips to pick from randomly
+    public int charsPerSound = 2;            // How many characters typed between each sound
+    public float voicePitchMin = 0.9f;       // Random pitch range min
+    public float voicePitchMax = 1.1f;       // Random pitch range max
+    public bool silenceOnSpaces = true;      // Skip sound for spaces and punctuation
+
+    private int charsSinceLastSound = 0;
+
     private DialogueData[] currentDialogueLines;
     private int currentLineIndex = 0;
     private bool isTyping = false;
     private bool showTriangle = false;
+    private bool isDialogueActive = false; // FIX: guard against re-triggering mid-dialogue
     private Vector3 triangleOriginalScale;
 
     private Coroutine typingRoutine;
@@ -54,6 +65,15 @@ public class DialogueSystemFreeze : MonoBehaviour
     {
         if (lines == null || lines.Length == 0) return;
 
+        // FIX: if dialogue is already running, queue the new lines onto the current
+        // session instead of fading out and back in.
+        if (isDialogueActive)
+        {
+            AppendDialogue(lines);
+            return;
+        }
+
+        isDialogueActive = true;
         currentDialogueLines = lines;
         currentLineIndex = 0;
 
@@ -65,14 +85,28 @@ public class DialogueSystemFreeze : MonoBehaviour
         if (backgroundOverlay != null)
             backgroundOverlay.gameObject.SetActive(true);
 
+        // FIX: only fade in once, at the start of the whole conversation
         dialogueGroup.gameObject.SetActive(true);
         StartCoroutine(FadeCanvasGroup(0f, 1f, fadeDuration));
 
         ShowCurrentLine();
     }
 
+    // FIX: appends new lines to the active dialogue without touching the UI visibility
+    private void AppendDialogue(DialogueData[] newLines)
+    {
+        int existingCount = currentDialogueLines.Length;
+        DialogueData[] merged = new DialogueData[existingCount + newLines.Length];
+        currentDialogueLines.CopyTo(merged, 0);
+        newLines.CopyTo(merged, existingCount);
+        currentDialogueLines = merged;
+    }
+
     private void Update()
     {
+        // Only process input while dialogue is active
+        if (!isDialogueActive) return;
+
         // Progress dialogue with Submit button (East gamepad button)
         if (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame)
         {
@@ -102,7 +136,8 @@ public class DialogueSystemFreeze : MonoBehaviour
         DialogueData data = currentDialogueLines[currentLineIndex];
 
         nameTMP.text = data.characterName;
-        characterIconImage.sprite = data.characterIcon;
+        if (data.characterIcon != null)
+            characterIconImage.sprite = data.characterIcon;
         dialogueTMP.text = "";
 
         if (typingRoutine != null)
@@ -115,6 +150,7 @@ public class DialogueSystemFreeze : MonoBehaviour
     {
         isTyping = true;
         dialogueTMP.text = "";
+        charsSinceLastSound = 0;
 
         if (nextLineTriangle != null)
             nextLineTriangle.gameObject.SetActive(false);
@@ -122,7 +158,8 @@ public class DialogueSystemFreeze : MonoBehaviour
         foreach (char c in text)
         {
             dialogueTMP.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            PlayVoiceSound(c);
+            yield return new WaitForSecondsRealtime(textSpeed); // FIX: unscaled so it works if timeScale = 0
         }
 
         isTyping = false;
@@ -174,6 +211,7 @@ public class DialogueSystemFreeze : MonoBehaviour
 
     private void EndDialogue()
     {
+        isDialogueActive = false; // FIX: clear the guard before fading out
         StartCoroutine(FadeOutAndResume());
     }
 
@@ -192,13 +230,29 @@ public class DialogueSystemFreeze : MonoBehaviour
         OnDialogueFinished?.Invoke();
     }
 
+    private void PlayVoiceSound(char c)
+    {
+        if (audioSource == null || voiceSounds == null || voiceSounds.Length == 0) return;
+
+        // Optionally skip whitespace and punctuation
+        if (silenceOnSpaces && (char.IsWhiteSpace(c) || char.IsPunctuation(c))) return;
+
+        charsSinceLastSound++;
+        if (charsSinceLastSound < charsPerSound) return;
+        charsSinceLastSound = 0;
+
+        AudioClip clip = voiceSounds[Random.Range(0, voiceSounds.Length)];
+        audioSource.pitch = Random.Range(voicePitchMin, voicePitchMax);
+        audioSource.PlayOneShot(clip);
+    }
+
     private IEnumerator FadeCanvasGroup(float from, float to, float duration)
     {
         float t = 0f;
         while (t < duration)
         {
             dialogueGroup.alpha = Mathf.Lerp(from, to, t / duration);
-            t += Time.unscaledDeltaTime; // Use unscaled delta to ignore game pause
+            t += Time.unscaledDeltaTime;
             yield return null;
         }
         dialogueGroup.alpha = to;

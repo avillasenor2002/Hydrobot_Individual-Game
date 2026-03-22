@@ -72,7 +72,6 @@ public class DialogueTrigger2D : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag(playerTag)) return;
-
         if (activeTrigger == this) return;
         if (hasTriggered && triggerOnce) return;
 
@@ -98,27 +97,44 @@ public class DialogueTrigger2D : MonoBehaviour
         activeTrigger = this;
         currentIndex = 0;
 
-        PlayLine(currentIndex);
+        if (dialogueSystemFreeze != null && playSequentially)
+        {
+            // FIX: pass the whole sequence at once so DialogueSystemFreeze handles
+            // every line internally — the UI never fades between lines.
+            dialogueSystemFreeze.StartDialogue(dialogueSequence);
+        }
+        else
+        {
+            // Original DialogueSystem path, or playSequentially = false:
+            // feed lines one at a time via HandleDialogueFinished.
+            PlayLine(currentIndex);
+        }
     }
 
+    // Used by the original DialogueSystem path, or playSequentially = false
     private void PlayLine(int index)
     {
         index = Mathf.Clamp(index, 0, dialogueSequence.Length - 1);
 
         if (dialogueSystem != null)
-        {
             dialogueSystem.ShowDialogue(dialogueSequence[index]);
-        }
         else if (dialogueSystemFreeze != null)
-        {
             dialogueSystemFreeze.StartDialogue(new DialogueData[] { dialogueSequence[index] });
-        }
     }
 
     private void HandleDialogueFinished()
     {
         if (activeTrigger != this) return;
 
+        // DialogueSystemFreeze + playSequentially: the whole sequence was passed
+        // at once, so one finished event means everything is done.
+        if (dialogueSystemFreeze != null && playSequentially)
+        {
+            FinishTrigger();
+            return;
+        }
+
+        // All other paths: advance line by line.
         if (!playSequentially)
         {
             FinishTrigger();
@@ -139,9 +155,7 @@ public class DialogueTrigger2D : MonoBehaviour
     private void FinishTrigger()
     {
         if (activeTrigger == this)
-        {
             activeTrigger = null;
-        }
     }
 
 #if UNITY_EDITOR

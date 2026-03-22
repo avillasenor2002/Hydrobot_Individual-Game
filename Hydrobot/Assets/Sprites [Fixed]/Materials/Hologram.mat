@@ -64,18 +64,18 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DistortionSpeed: 7
-    - _DistortionStrength: 0.00669
+    - _DistortionSpeed: 2.56
+    - _DistortionStrength: 0.00093
     - _DstBlend: 0
-    - _FlickerStrength: 0.152
+    - _FlickerStrength: 0.071
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.7
-    - _OutlineSize: 0.00371
+    - _Opacity: 0.851
+    - _OutlineSize: 0.00997
     - _Parallax: 0.02
     - _ScanlineDensity: 300
     - _ScanlineSpeed: 1.06
