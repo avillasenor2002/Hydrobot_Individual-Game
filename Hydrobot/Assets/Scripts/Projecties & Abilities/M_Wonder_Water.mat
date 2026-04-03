@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDrop
-  m_Shader: {fileID: 4800000, guid: 329b60cce600a8641b4a96b0e69e6c1d, type: 3}
+  m_Name: M_Wonder_Water
+  m_Shader: {fileID: 4800000, guid: 5ee6f33cf4920b646bb558b6fb50af7a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -61,37 +61,56 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BounceAmp: 0.018
+    - _BounceFreq: 1.6
     - _BumpScale: 1
+    - _CausticIntensity: 0.35
+    - _CausticScale: 14.6
+    - _CausticSharpness: 2.5
+    - _CausticSpeed: 5.17
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DistortSpeed: 0.31
-    - _DistortStrength: 0.0006
-    - _DistortionStrength: 0.05
+    - _DistortScale: 22
+    - _DistortSpeed: 2.82
+    - _DistortStrength: 0.0083
     - _DstBlend: 0
-    - _EdgeIntensity: 3
-    - _EdgeSoftness: 0.0621
-    - _EdgeThickness: 0.0427
-    - _EdgeWidth: 0.25
+    - _EdgeGlowPower: 2.08
+    - _EdgeRippleAmp: 0.0269
+    - _EdgeRippleBands: 3.27
+    - _EdgeRippleFreq: 14
+    - _EdgeRippleSpeed: 7.72
+    - _EdgeThickness: 0.0421
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HighlightPulseAmp: 0.289
+    - _HighlightPulseSpeed: 1.2
+    - _HighlightSize: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RefractionStrength: 0.0798
-    - _RimIntensity: 2
-    - _RimSize: 0.3
+    - _RefractionScale: 0.0347
+    - _RippleAmp: 0.018
+    - _RippleEdgeFalloff: 0.15
+    - _RippleFreq: 6
+    - _RippleSpeed: 2.2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SquashAmp: 0.01
     - _SrcBlend: 1
-    - _TrailFade: 0
-    - _Transparency: 0.334
+    - _Transparency: 1
     - _UVSec: 0
+    - _WobbleAmp: 0.008
+    - _WobbleFreq: 6
+    - _WobbleSpeed: 2.2
     - _ZWrite: 1
     m_Colors:
+    - _CausticColor: {r: 0.6, g: 0.9, b: 1, a: 0.5}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EdgeColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Tint: {r: 0.34433955, g: 0.9287539, b: 1, a: 0.6862745}
+    - _HighlightColor: {r: 1, g: 1, b: 1, a: 0.7}
+    - _HighlightOffset: {r: -0.15, g: 0.2, b: 0, a: 0}
+    - _Tint: {r: 0, g: 1, b: 0.9515679, a: 1}
   m_BuildTextureStacks: []
