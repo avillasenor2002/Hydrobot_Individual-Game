@@ -41373,7 +41373,7 @@ MonoBehaviour:
   fadeDuration: 0.5
   musicSource: {fileID: 107810295}
   introMusic: {fileID: 8300000, guid: c76c3e6326ac51a4f89b087f00203d42, type: 3}
-  mainMusic: {fileID: 8300000, guid: ffd0c8a26fb38614cb1753845af05812, type: 3}
+  mainMusic: {fileID: 8300000, guid: 4aeb21498cec70447a5d21680b1d9688, type: 3}
   dialogueSystem: {fileID: 1140644684}
   dialogueSequence:
   - {fileID: 11400000, guid: cb20008941ff39a42a6527102cedcbb3, type: 2}
