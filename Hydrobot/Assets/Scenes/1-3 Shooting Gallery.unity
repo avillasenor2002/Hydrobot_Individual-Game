@@ -38662,7 +38662,7 @@ MonoBehaviour:
   fadeDuration: 0.5
   musicSource: {fileID: 107810295}
   introMusic: {fileID: 8300000, guid: 081a79f288d292648b42ae45fa6ea466, type: 3}
-  mainMusic: {fileID: 8300000, guid: 2140746c7e198854480d2d5d21ddb72d, type: 3}
+  mainMusic: {fileID: 8300000, guid: 4aeb21498cec70447a5d21680b1d9688, type: 3}
   dialogueSystem: {fileID: 0}
   dialogueSequence: []
   playDialogueOnce: 1
