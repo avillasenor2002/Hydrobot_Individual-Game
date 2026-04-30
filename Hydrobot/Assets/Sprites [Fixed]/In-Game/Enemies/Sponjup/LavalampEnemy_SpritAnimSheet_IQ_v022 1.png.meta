@@ -1,0 +1,743 @@
+fileFormatVersion: 2
+guid: ed7a5aa34b0c1c34f9847341ce02da5c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_0
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 3794
+        width: 530
+        height: 894
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8688e2210f39d024c9e98f752189065f
+      internalID: 207058150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_1
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 3790
+        width: 531
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e227122f90f6e4c44ac7da90d8ad5ce5
+      internalID: -1246750074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_2
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 3784
+        width: 507
+        height: 901
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8634a02e829d74946b4a6d27f426f650
+      internalID: -1003752431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_3
+      rect:
+        serializedVersion: 2
+        x: 2999
+        y: 3797
+        width: 507
+        height: 901
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b135513ae37ad43489400a055f2904dc
+      internalID: -168649084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_4
+      rect:
+        serializedVersion: 2
+        x: 3950
+        y: 3784
+        width: 507
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9efbfc9d01c1047a1f9ba4c0c81f6f
+      internalID: -760937122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_5
+      rect:
+        serializedVersion: 2
+        x: 4984
+        y: 3790
+        width: 508
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faec186802083ed41a50594be2a07886
+      internalID: -887996512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_6
+      rect:
+        serializedVersion: 2
+        x: 6059
+        y: 3790
+        width: 491
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817bb0af9fb255a4fbdc2afc2da673ce
+      internalID: -1776666472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_7
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 2627
+        width: 490
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec18f96edce5bd4e859ed19b61b932a
+      internalID: -862476314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_8
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 2625
+        width: 470
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddeda7c7f587e354781b53b0f64053e9
+      internalID: 1198158074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_9
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 2606
+        width: 471
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14997367297ef384184d0c4d8faf7dbb
+      internalID: 381846610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_10
+      rect:
+        serializedVersion: 2
+        x: 2974
+        y: 2615
+        width: 565
+        height: 921
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6ab186c2da3054dabc770956094078
+      internalID: -565124030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_11
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 2599
+        width: 567
+        height: 921
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15228cb32f2465b478b5e4a1916ec7db
+      internalID: -578786739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_12
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 2615
+        width: 572
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fab4b6a4abcc140889cb912cc50dc2
+      internalID: -1568087704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_13
+      rect:
+        serializedVersion: 2
+        x: 6019
+        y: 2634
+        width: 574
+        height: 909
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a5e01950fe0694b81cf679da70da64
+      internalID: 1541094216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_14
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1427
+        width: 564
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530652ba4d299344e98fd58bf557005c
+      internalID: -1100180884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_15
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 1445
+        width: 566
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d08fef17d91e34b8090c8a9a0ad1ce
+      internalID: 1634844937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_16
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 1444
+        width: 517
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fcf3e6d7f3dd24f902642bdca5ae85
+      internalID: 1908144284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_17
+      rect:
+        serializedVersion: 2
+        x: 2979
+        y: 1434
+        width: 517
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba21a6bc18f58b64a8de73c8403b6e39
+      internalID: 258527656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_18
+      rect:
+        serializedVersion: 2
+        x: 3913
+        y: 1420
+        width: 477
+        height: 908
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b66c86bf62576a478d62d207d3588ca
+      internalID: -1432054727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_19
+      rect:
+        serializedVersion: 2
+        x: 4904
+        y: 1420
+        width: 478
+        height: 908
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10ee14ec6c892e42ac170879e2dedda
+      internalID: -390625666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_20
+      rect:
+        serializedVersion: 2
+        x: 5959
+        y: 1404
+        width: 470
+        height: 901
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2449df7683bfe40aca996256995e20
+      internalID: 734422346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_21
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 295
+        width: 467
+        height: 902
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e783345744c584c8e69de608e3c9fb
+      internalID: -740231946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_22
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 262
+        width: 527
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c2822bf417cbd44810c92761f2b75e
+      internalID: 1519331278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_23
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 252
+        width: 524
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee63460a0757b14c8ad7f902ec15025
+      internalID: -1778350039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_24
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 249
+        width: 561
+        height: 907
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2341b028d14ad04b8efd2d0a5710ed5
+      internalID: 7672708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_25
+      rect:
+        serializedVersion: 2
+        x: 4007
+        y: 232
+        width: 547
+        height: 891
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c91051570370849ae0a20fd1d260a0
+      internalID: 502857785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_26
+      rect:
+        serializedVersion: 2
+        x: 4931
+        y: 219
+        width: 561
+        height: 907
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f14647de1f7a9446851ed49d630601b
+      internalID: 1035329222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LavalampEnemy_SpritAnimSheet_IQ_v022_27
+      rect:
+        serializedVersion: 2
+        x: 5966
+        y: 216
+        width: 547
+        height: 894
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49c07118d98ed94d8953a1195a4b4e3
+      internalID: 1510631366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LavalampEnemy_SpritAnimSheet_IQ_v022_0: 207058150
+      LavalampEnemy_SpritAnimSheet_IQ_v022_1: -1246750074
+      LavalampEnemy_SpritAnimSheet_IQ_v022_10: -565124030
+      LavalampEnemy_SpritAnimSheet_IQ_v022_11: -578786739
+      LavalampEnemy_SpritAnimSheet_IQ_v022_12: -1568087704
+      LavalampEnemy_SpritAnimSheet_IQ_v022_13: 1541094216
+      LavalampEnemy_SpritAnimSheet_IQ_v022_14: -1100180884
+      LavalampEnemy_SpritAnimSheet_IQ_v022_15: 1634844937
+      LavalampEnemy_SpritAnimSheet_IQ_v022_16: 1908144284
+      LavalampEnemy_SpritAnimSheet_IQ_v022_17: 258527656
+      LavalampEnemy_SpritAnimSheet_IQ_v022_18: -1432054727
+      LavalampEnemy_SpritAnimSheet_IQ_v022_19: -390625666
+      LavalampEnemy_SpritAnimSheet_IQ_v022_2: -1003752431
+      LavalampEnemy_SpritAnimSheet_IQ_v022_20: 734422346
+      LavalampEnemy_SpritAnimSheet_IQ_v022_21: -740231946
+      LavalampEnemy_SpritAnimSheet_IQ_v022_22: 1519331278
+      LavalampEnemy_SpritAnimSheet_IQ_v022_23: -1778350039
+      LavalampEnemy_SpritAnimSheet_IQ_v022_24: 7672708
+      LavalampEnemy_SpritAnimSheet_IQ_v022_25: 502857785
+      LavalampEnemy_SpritAnimSheet_IQ_v022_26: 1035329222
+      LavalampEnemy_SpritAnimSheet_IQ_v022_27: 1510631366
+      LavalampEnemy_SpritAnimSheet_IQ_v022_3: -168649084
+      LavalampEnemy_SpritAnimSheet_IQ_v022_4: -760937122
+      LavalampEnemy_SpritAnimSheet_IQ_v022_5: -887996512
+      LavalampEnemy_SpritAnimSheet_IQ_v022_6: -1776666472
+      LavalampEnemy_SpritAnimSheet_IQ_v022_7: -862476314
+      LavalampEnemy_SpritAnimSheet_IQ_v022_8: 1198158074
+      LavalampEnemy_SpritAnimSheet_IQ_v022_9: 381846610
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

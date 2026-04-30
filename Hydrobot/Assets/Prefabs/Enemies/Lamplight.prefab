@@ -84,6 +84,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   protectedEnemies:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   protectedTintColor: {r: 1, g: 0.33490568, b: 0.76526093, a: 0.84705883}
   baseLineWidth: 0.15
   lineWidthVariation: 0.5
@@ -240,6 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8915012833122570075}
   - component: {fileID: 3499867051327240543}
+  - component: {fileID: 3305296223690852881}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -314,3 +318,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3305296223690852881
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193131010266162427}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa4390762d309214e8d2c5a34e14a028, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
