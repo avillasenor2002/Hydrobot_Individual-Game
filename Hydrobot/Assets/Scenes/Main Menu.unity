@@ -14612,7 +14612,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2073710089}
         m_TargetAssemblyTypeName: QuitButton, Assembly-CSharp
-        m_MethodName: QuitApplication
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
