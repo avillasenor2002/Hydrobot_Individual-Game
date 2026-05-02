@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2868767816277845936}
   - component: {fileID: 2193112611493227221}
+  - component: {fileID: 5000360690132056730}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -84,6 +85,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5000360690132056730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915581928889842455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca2c3964d0924c4ba51bddef01fc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleSprite: {fileID: 21300000, guid: 69d5cc63240601c46972539b38e5e871, type: 3}
+  levelSprite: {fileID: 21300000, guid: 48e481acb3c0e184aba3c7042aa390c2, type: 3}
+  aboveSprite: {fileID: 21300000, guid: 8a70a3f094984fc43b1cc5cd18be1f45, type: 3}
+  belowSprite: {fileID: 21300000, guid: 02d5b34dd60d95e44b65db15d8635c24, type: 3}
+  playerTransform: {fileID: 0}
+  detectionRange: 5.5
+  showRangeGizmo: 1
+  angleThreshold: 25
+  useSpriteCentre: 0
+  enableTilt: 1
+  maxTiltAngle: 15
+  tiltRampRange: 30
+  tiltSmoothSpeed: 180
+  tiltInLevelZone: 1
+  maxLevelZoneTilt: 8
+  enableFlip: 1
+  defaultFacing: 1
+  flipDeadZone: 0.1
+  updateMode: 0
+  showDebugRay: 1
 --- !u!1 &2892950446490737737
 GameObject:
   m_ObjectHideFlags: 0

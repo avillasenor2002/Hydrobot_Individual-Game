@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8751185890830530019}
   - component: {fileID: 2246537369073811002}
   - component: {fileID: 6472104983127223629}
+  - component: {fileID: 6494628476197324960}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Untagged
@@ -106,6 +107,38 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6494628476197324960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677383391829256434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca2c3964d0924c4ba51bddef01fc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleSprite: {fileID: 0}
+  levelSprite: {fileID: 0}
+  aboveSprite: {fileID: 0}
+  belowSprite: {fileID: 0}
+  playerTransform: {fileID: 0}
+  detectionRange: 5.5
+  showRangeGizmo: 1
+  angleThreshold: 15.1
+  useSpriteCentre: 0
+  enableTilt: 1
+  maxTiltAngle: 15.5
+  tiltRampRange: 30
+  tiltSmoothSpeed: 180
+  tiltInLevelZone: 0
+  maxLevelZoneTilt: 8
+  enableFlip: 1
+  defaultFacing: 1
+  flipDeadZone: 0.1
+  updateMode: 0
+  showDebugRay: 1
 --- !u!1 &2469018133171754856
 GameObject:
   m_ObjectHideFlags: 0

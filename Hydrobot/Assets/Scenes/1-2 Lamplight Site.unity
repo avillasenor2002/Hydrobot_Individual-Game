@@ -3017,11 +3017,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261353676}
   m_CullTransparentMesh: 1
---- !u!58 &264928152 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 7549949066479114978, guid: 36d8472c7ba554245baf2699983b2c95, type: 3}
-  m_PrefabInstance: {fileID: 1618472029}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &264928153 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5376291847178786807, guid: 36d8472c7ba554245baf2699983b2c95, type: 3}
@@ -3407,6 +3402,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5338087981015018558, guid: d6dfe235ee2c5b940b51f38a29f22c74, type: 3}
+      propertyPath: playerRB
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338087981015018558, guid: d6dfe235ee2c5b940b51f38a29f22c74, type: 3}
+      propertyPath: WaterTank
+      value: 
+      objectReference: {fileID: 2079290929}
     - target: {fileID: 6979725952897896375, guid: d6dfe235ee2c5b940b51f38a29f22c74, type: 3}
       propertyPath: m_Creator
       value: 
@@ -15632,9 +15635,11 @@ PrefabInstance:
       propertyPath: targetTilemap
       value: 
       objectReference: {fileID: 2018771851}
-    m_RemovedComponents:
-    - {fileID: 5380289730129231891, guid: 7b907a27fed3b5f448127a7f627a335a, type: 3}
-    - {fileID: 5210388787295336048, guid: 7b907a27fed3b5f448127a7f627a335a, type: 3}
+    - target: {fileID: 6494628476197324960, guid: 7b907a27fed3b5f448127a7f627a335a, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 2080675660}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25090,10 +25095,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5376291847178786807, guid: 36d8472c7ba554245baf2699983b2c95, type: 3}
-      propertyPath: col
+    - target: {fileID: 5000360690132056730, guid: 36d8472c7ba554245baf2699983b2c95, type: 3}
+      propertyPath: playerTransform
       value: 
-      objectReference: {fileID: 264928152}
+      objectReference: {fileID: 2080675660}
     - target: {fileID: 5376291847178786807, guid: 36d8472c7ba554245baf2699983b2c95, type: 3}
       propertyPath: audioSource
       value: 
@@ -28024,6 +28029,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3558865158140884223, guid: 8a11a66e1fd068f4c8d9b49edc5290cd, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 2080675660}
     - target: {fileID: 6686801322492362988, guid: 8a11a66e1fd068f4c8d9b49edc5290cd, type: 3}
       propertyPath: m_Name
       value: Purple Spiketop 1 (3)
@@ -28032,10 +28041,6 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1538799179}
-    - target: {fileID: 8348476861710795662, guid: 8a11a66e1fd068f4c8d9b49edc5290cd, type: 3}
-      propertyPath: snapToTilemap
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8348476861710795662, guid: 8a11a66e1fd068f4c8d9b49edc5290cd, type: 3}
       propertyPath: targetTilemap
       value: 
@@ -44237,6 +44242,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420032}
     - target: {fileID: 1650614298859282655, guid: 6f7613c04c54b414aae5e6c1e29619f5, type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 519420032}
+    - target: {fileID: 2210125606065236896, guid: 6f7613c04c54b414aae5e6c1e29619f5, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 519420032}
