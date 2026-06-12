@@ -10,9 +10,12 @@ public class WaterProjectile : MonoBehaviour
     [SerializeField] private GameObject splashPrefab;
     [SerializeField] private AudioClip destroySound;
     [SerializeField] private AudioClip UnderwaterSound;
-    [SerializeField] private AudioClip protectedHitSound; // NEW: sound for protected enemies
+    [SerializeField] private AudioClip protectedHitSound;
     [SerializeField] private AudioSource audioSourcePrefab;
     [SerializeField] private int damage = 1;
+    [SerializeField] private int maxBounces = 3;
+
+    private int bounceCount = 0;
 
     private void Start()
     {
@@ -25,25 +28,29 @@ public class WaterProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Dampen velocity on bouncy collision instead of destroying
+        if (collision.gameObject.CompareTag("Bounce"))
+        {
+            bounceCount++;
+            rb.velocity *= 0.25f;
+            if (bounceCount < maxBounces) return;
+            // Fallen through — treat as a normal hit after max bounces
+        }
+
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (enemy != null)
         {
             if (!enemy.isProtected)
             {
-                // Enemy is not protected, perform normal hit actions
                 if (enemy.audioSource != null && enemy.waterImpactSound != null)
                     enemy.audioSource.PlayOneShot(enemy.waterImpactSound);
-
                 enemy.StartCoroutine(enemy.FlickerWhite());
                 enemy.TakeDamage(damage);
-
-                // Trigger shrink behavior if this enemy has a ProjectileBehavior
                 if (enemy.behavior is ProjectileBehavior projectileBehavior)
                     projectileBehavior.OnProjectileHit(enemy);
             }
             else
             {
-                // Enemy is protected, play special protected sound
                 if (protectedHitSound != null && audioSourcePrefab != null)
                 {
                     AudioSource tempAudioSource = Instantiate(audioSourcePrefab, transform.position, Quaternion.identity);
@@ -54,27 +61,19 @@ public class WaterProjectile : MonoBehaviour
             }
         }
 
-        // Instantiate splash effect
         if (splashPrefab != null)
             Instantiate(splashPrefab, transform.position, Quaternion.identity);
 
-        // Play destroy sound
         PlayDestroySound();
-
-        // Destroy projectile
         Destroy(gameObject);
     }
 
     public void Death()
     {
-        // Instantiate splash effect
         if (splashPrefab != null)
             Instantiate(splashPrefab, transform.position, Quaternion.identity);
 
-        // Play destroy sound
         PlayUWDestroySound();
-
-        // Destroy projectile
         Destroy(gameObject);
     }
 

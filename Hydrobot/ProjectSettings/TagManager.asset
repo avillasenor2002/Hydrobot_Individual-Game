@@ -8,6 +8,7 @@ TagManager:
   - Projectile
   - SeeThrough
   - Enemy
+  - Bounce
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - walls
   - Player
   - Projectile
-  - 
+  - Bounce
   - 
   - 
   - 

@@ -109,6 +109,7 @@ MonoBehaviour:
   protectedHitSound: {fileID: 8300000, guid: 70da292ce3783474e93facf20981d650, type: 3}
   audioSourcePrefab: {fileID: 1240373640627511473, guid: 11834944ffa535d4caa3dfe7361c4605, type: 3}
   damage: 1
+  BounceVel: 0.25
 --- !u!58 &3919626299470896565
 CircleCollider2D:
   m_ObjectHideFlags: 0
