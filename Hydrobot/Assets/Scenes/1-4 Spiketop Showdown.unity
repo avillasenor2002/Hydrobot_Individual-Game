@@ -25155,7 +25155,7 @@ MonoBehaviour:
   fadeDuration: 0.5
   musicSource: {fileID: 107810295}
   introMusic: {fileID: 8300000, guid: 081a79f288d292648b42ae45fa6ea466, type: 3}
-  mainMusic: {fileID: 8300000, guid: 4aeb21498cec70447a5d21680b1d9688, type: 3}
+  mainMusic: {fileID: 8300000, guid: cf367a6a8e4babd468dec9cdc7dbc4d0, type: 3}
   dialogueSystem: {fileID: 1140644684}
   dialogueSequence:
   - {fileID: 11400000, guid: e9a79ee8375d2774bacefcf358f41d12, type: 2}
@@ -25178,12 +25178,12 @@ MonoBehaviour:
   fadeDuration: 1
   maxOpacity: 0.8
   musicSource: {fileID: 107810295}
-  endMusic: {fileID: 8300000, guid: 64f106533002af24b85fa3775028ce88, type: 3}
+  endMusic: {fileID: 8300000, guid: 8e8678c2b95b3764592c436d819b8627, type: 3}
   loopingMusic: {fileID: 8300000, guid: 63c7dca1dbc93ea49850456249cf3446, type: 3}
   slowTimeScale: 0.3
   slowDuration: 2
   gameOverUIRoot: {fileID: 649630170}
-  gameOverMusic: {fileID: 8300000, guid: 5093fd531a281b846be8c0c898089bf6, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 52f937490d153574d97d1f2fb097e8c5, type: 3}
   gameOverFirstSelected: {fileID: 163679719}
   levelEndFirstSelected: {fileID: 291514881}
   currentLevelIndex: 4

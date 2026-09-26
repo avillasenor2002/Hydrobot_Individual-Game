@@ -45290,7 +45290,7 @@ MonoBehaviour:
   introUIRoot: {fileID: 188380005}
   fadeDuration: 0.5
   musicSource: {fileID: 107810295}
-  introMusic: {fileID: 8300000, guid: 30911b93759330c4887df2abc3e33124, type: 3}
+  introMusic: {fileID: 8300000, guid: f556ec1ffb9135748b021aa1ca39553f, type: 3}
   mainMusic: {fileID: 0}
   dialogueSystem: {fileID: 0}
   dialogueSequence: []
