@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueText: There is the Ready-Bot! Pop that capsule and get our friend outta
     there!
   characterName: Professor Avalon
-  characterIcon: {fileID: 21300000, guid: a0295e70cb287994ba8642314cca3d6c, type: 3}
+  characterIcon: {fileID: 21300000, guid: 9a8799ed6af962c43ade493355367cf3, type: 3}
   textSpeed: 0.025
   autoHideTime: 3
