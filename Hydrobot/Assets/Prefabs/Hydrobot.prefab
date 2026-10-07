@@ -40036,16 +40036,24 @@ MonoBehaviour:
     hydroNormalMove: {fileID: 21300000, guid: c241dab15fd78d04e9349ee60ab61b54, type: 3}
     hydroFreezeIdle: {fileID: 21300000, guid: 384672054e57a194185e2ebc6aa16dae, type: 3}
     hydroFreezeMove: {fileID: 21300000, guid: f229dcb6af4abc04885719bd5b0efac9, type: 3}
+    armNormalIdle: {fileID: 21300000, guid: a4201ecd87702a3448755fcc360ac44c, type: 3}
+    armNormalMove: {fileID: 21300000, guid: a4201ecd87702a3448755fcc360ac44c, type: 3}
+    armFreezeIdle: {fileID: 21300000, guid: 5d4222536af497947a43003536de8905, type: 3}
+    armFreezeMove: {fileID: 21300000, guid: 5d4222536af497947a43003536de8905, type: 3}
     maxSpeed: 4.5
     maxDashSpeed: 9
   - modeName: Steam
     projectilePrefab: {fileID: 2171587039075286682, guid: 4b1262d6aada7a04886752a287fabdd5, type: 3}
     projectileSpeed: 8
     waterLoss: 1.2
-    hydroNormalIdle: {fileID: 21300000, guid: b0c71140eb344c5409e191262ca79d48, type: 3}
-    hydroNormalMove: {fileID: 21300000, guid: 384672054e57a194185e2ebc6aa16dae, type: 3}
-    hydroFreezeIdle: {fileID: 21300000, guid: 32e2332fbe6128c43b5bcc302abe70f1, type: 3}
-    hydroFreezeMove: {fileID: 21300000, guid: 10739d8ce31d108498811c1d22c27697, type: 3}
+    hydroNormalIdle: {fileID: 21300000, guid: abe1cee436ea9ed4082c46b3a19ef8cc, type: 3}
+    hydroNormalMove: {fileID: 21300000, guid: 38302dcbfcccf474eb2183143c87058e, type: 3}
+    hydroFreezeIdle: {fileID: 21300000, guid: 944e064294676b54b8c52a39df4f259d, type: 3}
+    hydroFreezeMove: {fileID: 21300000, guid: cf39a01a2a4053d428b96843c9d8c8d1, type: 3}
+    armNormalIdle: {fileID: 0}
+    armNormalMove: {fileID: 0}
+    armFreezeIdle: {fileID: 0}
+    armFreezeMove: {fileID: 0}
     maxSpeed: 10
     maxDashSpeed: 15
   shootingPoint: {fileID: 4138347140558588063}

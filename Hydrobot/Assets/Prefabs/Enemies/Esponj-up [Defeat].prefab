@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c456032b51810479a1503c0e027351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterAddAmount: 150
+  waterAddAmount: 95
   pickupSound: {fileID: 8300000, guid: c8db99c89943e1541b8408b038696002, type: 3}
   audioSource: {fileID: 0}
   flickerDuration: 0.1

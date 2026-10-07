@@ -18,6 +18,12 @@ public class ProjectileShoot : MonoBehaviour
         public Sprite hydroFreezeIdle;
         public Sprite hydroFreezeMove;
 
+        // Arm sprite variants
+        public Sprite armNormalIdle;
+        public Sprite armNormalMove;
+        public Sprite armFreezeIdle;
+        public Sprite armFreezeMove;
+
         public float maxSpeed;
         public float maxDashSpeed;
     }
@@ -100,6 +106,13 @@ public class ProjectileShoot : MonoBehaviour
                 currentMode.hydroNormalMove,
                 currentMode.hydroFreezeIdle,
                 currentMode.hydroFreezeMove
+            );
+
+            playerSprite.SetArmSprites(
+                currentMode.armNormalIdle,
+                currentMode.armNormalMove,
+                currentMode.armFreezeIdle,
+                currentMode.armFreezeMove
             );
         }
     }

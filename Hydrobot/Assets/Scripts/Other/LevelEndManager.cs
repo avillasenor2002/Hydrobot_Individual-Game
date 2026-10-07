@@ -31,6 +31,9 @@ public class LevelEndManager : MonoBehaviour
     [Header("Level Settings")]
     [SerializeField] private int currentLevelIndex = 0;
 
+    [Header("Pause UI")]
+    [SerializeField] private GameObject pauseUI;
+
     private Image rootImage;
     private Image[] childImages;
     private Text[] childTexts;
@@ -90,6 +93,12 @@ public class LevelEndManager : MonoBehaviour
             PlayerSettingsManager.Instance.UpdateLevelSelectLock();
     }
 
+    private void DestroyPauseUI()
+    {
+        if (pauseUI != null)
+            Destroy(pauseUI);
+    }
+
     private IEnumerator HandleGameOverSequence()
     {
         if (musicSource != null && gameOverMusic != null)
@@ -104,6 +113,9 @@ public class LevelEndManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(slowDuration);
 
         Time.timeScale = 0f;
+
+        // Remove the pause UI as the game over UI fades in
+        DestroyPauseUI();
 
         if (gameOverUIRoot != null)
         {
@@ -151,6 +163,9 @@ public class LevelEndManager : MonoBehaviour
 
         Time.timeScale = slowTimeScale;
         yield return new WaitForSecondsRealtime(slowDuration);
+
+        // Remove the pause UI as the end UI fades in
+        DestroyPauseUI();
 
         if (endUIRoot != null)
         {

@@ -8,6 +8,7 @@ public class DialogueData : ScriptableObject
 
     public string characterName;
     public Sprite characterIcon;
+    public AudioClip DialougeClip;
 
     public float textSpeed = 0.03f;       // time per letter
     public float autoHideTime = 3f;       // after line completes

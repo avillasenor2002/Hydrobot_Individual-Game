@@ -283,6 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6857689653303046779}
   - component: {fileID: 4839227329450135318}
+  - component: {fileID: 1141462041764879917}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Untagged
@@ -357,3 +358,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1141462041764879917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8149508814439437418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d155549c6a7f55e4a94166c3ba45b58b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 45
+  respawnPrefab: {fileID: 2211304239106922262, guid: e2fb8c8cf1220154aa4446abf06b7ffa, type: 3}
+  useCustomSpawnPoint: 1
+  customSpawnPoint: {fileID: 0}

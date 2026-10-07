@@ -22,6 +22,12 @@ public class LevelIntroManager : MonoBehaviour
     public bool playDialogueOnce = true;
     public bool playSequentially = true;
 
+    [Header("Freeze Dialogue (Optional)")]
+    [Tooltip("DialogueSystemFreeze that freezes gameplay while dialogue plays.")]
+    public DialogueSystemFreeze freezeDialogueSystem;
+    [Tooltip("If true, the level intro will hand off to the freeze dialogue system on start.")]
+    public bool startFreezeDialogue = false;
+
     [Header("Debug Options")]
     public bool useOldEnemyCounter = false; // debug toggle to use old EnemyCounter
 
@@ -134,8 +140,19 @@ public class LevelIntroManager : MonoBehaviour
         if (introUIRoot != null) introUIRoot.SetActive(false);
         Time.timeScale = 1f;
 
-        // Start sequential dialogue if assigned
-        if (dialogueSystem != null && dialogueSequence != null && dialogueSequence.Length > 0)
+        // --- Dialogue handoff ---
+        // If the freeze dialogue option is enabled and set up, use it.
+        if (startFreezeDialogue && freezeDialogueSystem != null &&
+            dialogueSequence != null && dialogueSequence.Length > 0)
+        {
+            if (!dialoguePlayed || !playDialogueOnce)
+            {
+                dialoguePlayed = true;
+                freezeDialogueSystem.StartDialogue(dialogueSequence);
+            }
+        }
+        // Otherwise fall back to the original DialogueSystem behavior.
+        else if (dialogueSystem != null && dialogueSequence != null && dialogueSequence.Length > 0)
         {
             if (!dialoguePlayed || !playDialogueOnce)
             {

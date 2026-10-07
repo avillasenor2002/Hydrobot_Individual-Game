@@ -164,6 +164,17 @@
                 },
                 {
                     "name": "",
+                    "id": "bc1ea2d0-a3ac-4228-abc7-bf86d7bd729d",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Freeze",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e1ae584c-b147-4e55-823c-e9b95d076aa3",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "Press(behavior=2)",
