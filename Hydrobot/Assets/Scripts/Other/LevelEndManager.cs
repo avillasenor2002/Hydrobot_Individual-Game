@@ -31,6 +31,13 @@ public class LevelEndManager : MonoBehaviour
     [Header("Level Settings")]
     [SerializeField] private int currentLevelIndex = 0;
 
+    [Header("Level Data")]
+    [Tooltip("LevelData for the level being completed. Its isComplete is set to true.")]
+    [SerializeField] private LevelData completedLevelData;
+
+    [Tooltip("LevelData for the level to unlock next. Its locked is set to false.")]
+    [SerializeField] private LevelData nextLevelData;
+
     [Header("Pause UI")]
     [SerializeField] private GameObject pauseUI;
 
@@ -57,11 +64,14 @@ public class LevelEndManager : MonoBehaviour
 
     private void Update()
     {
-        // If a UI screen is up and focus has drifted (e.g. mouse click on empty space,
-        // gamepad disconnected briefly), re-assert the intended selection every frame.
+        // Only re-assert focus if selection was LOST entirely (e.g. mouse click on
+        // empty space, gamepad briefly disconnected). If a different button is
+        // selected, that's the player navigating — don't fight them.
         if (targetSelected != null && EventSystem.current != null)
         {
-            if (EventSystem.current.currentSelectedGameObject != targetSelected)
+            var current = EventSystem.current.currentSelectedGameObject;
+
+            if (current == null || !current.activeInHierarchy)
                 EventSystem.current.SetSelectedGameObject(targetSelected);
         }
     }
@@ -88,6 +98,16 @@ public class LevelEndManager : MonoBehaviour
     {
         PlayerPrefs.SetInt($"Level{currentLevelIndex}Complete", 1);
         PlayerPrefs.Save();
+
+        // --- Update the LevelData assets ---
+
+        // The level that was just finished becomes complete.
+        if (completedLevelData != null)
+            completedLevelData.isComplete = true;
+
+        // The next level becomes unlocked.
+        if (nextLevelData != null)
+            nextLevelData.locked = false;
 
         if (PlayerSettingsManager.Instance != null)
             PlayerSettingsManager.Instance.UpdateLevelSelectLock();
@@ -204,6 +224,17 @@ public class LevelEndManager : MonoBehaviour
         {
             Debug.LogWarning("[LevelEndManager] No EventSystem found in scene.");
             yield break;
+        }
+
+        // Make sure the target is actually selectable before we hand it focus.
+        var selectable = target.GetComponent<Selectable>();
+        if (selectable == null)
+        {
+            Debug.LogWarning($"[LevelEndManager] '{target.name}' has no Selectable component; navigation will not work.");
+        }
+        else if (!selectable.interactable)
+        {
+            Debug.LogWarning($"[LevelEndManager] '{target.name}' is not interactable; navigation will not work.");
         }
 
         EventSystem.current.SetSelectedGameObject(null);

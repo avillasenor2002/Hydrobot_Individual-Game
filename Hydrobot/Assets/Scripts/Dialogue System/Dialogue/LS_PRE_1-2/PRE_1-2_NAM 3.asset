@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8107bc155109014baed5c06eb1022d0, type: 3}
+  m_Name: PRE_1-2_NAM 3
+  m_EditorClassIdentifier: 
+  dialogueText: ...Just make sure he can speak to a lawyer.
+  characterName: Namir Sayed
+  characterIcon: {fileID: 21300000, guid: e0d402d3066aa9c438f77814a16d158d, type: 3}
+  DialougeClip: {fileID: 8300000, guid: 225105d43459d2848b4766c90820c119, type: 3}
+  textSpeed: 0.03
+  autoHideTime: 3

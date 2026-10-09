@@ -756,31 +756,14 @@ MonoBehaviour:
   characterIconImage: {fileID: 1251302675654028549}
   timerFillImage: {fileID: 7215541544840066754}
   fadeDuration: 0.25
-  audioSource: {fileID: 5422849038839243525}
-  voiceSounds:
-  - {fileID: 8300000, guid: c411191902897ea409b99757a0c81d91, type: 3}
-  - {fileID: 8300000, guid: 7ea29e6329b0ef14891edab3d8b0f8bb, type: 3}
-  - {fileID: 8300000, guid: 1d64ebf787e8aa4469922c7b126493db, type: 3}
-  - {fileID: 8300000, guid: 614de4fc741c4564990b7d13d40383a7, type: 3}
-  - {fileID: 8300000, guid: 0f944911016f38f49a7c256f0b42050e, type: 3}
-  - {fileID: 8300000, guid: 24ed9a25e16cc5e4f8780cbe94fa989c, type: 3}
-  - {fileID: 8300000, guid: ba23cbc250adc7e44a540ed8ddb4ffff, type: 3}
-  - {fileID: 8300000, guid: 676b478807347d24ea98280d7f732208, type: 3}
-  - {fileID: 8300000, guid: 4429f4c753edd1c4aadc60d84b15a3fc, type: 3}
-  - {fileID: 8300000, guid: 7bd562302c4704745a68c3fb3deeafe8, type: 3}
-  - {fileID: 8300000, guid: 60d1bf1947d0695478ed7f93d5ce3f86, type: 3}
-  - {fileID: 8300000, guid: af55a4034239e8e458a8c4029cfe3dff, type: 3}
-  - {fileID: 8300000, guid: 42579f6cfc6cac74ab4d00c178c17827, type: 3}
-  - {fileID: 8300000, guid: 6771cbde6123cdb4c99f1324229eb5f3, type: 3}
-  - {fileID: 8300000, guid: 12de9f8f58aeb304abc489cb620030c7, type: 3}
-  - {fileID: 8300000, guid: ee4d2a0975a17ec4291e26ea7b43594b, type: 3}
-  - {fileID: 8300000, guid: 64f87c6e2be791b468a289ff40d78ec8, type: 3}
-  - {fileID: 8300000, guid: c21fcefd8fbba3843937e7298bbf66e8, type: 3}
-  - {fileID: 8300000, guid: f0176679ebac0db4a8901de3c188013c, type: 3}
+  audioSource: {fileID: 0}
+  voiceSounds: []
   charsPerSound: 2
   voicePitchMin: 0.9
   voicePitchMax: 1.1
   silenceOnSpaces: 1
+  dialogueClipSource: {fileID: 5422849038839243525}
+  matchTextSpeedToAudio: 1
 --- !u!82 &5422849038839243525
 AudioSource:
   m_ObjectHideFlags: 0
@@ -799,7 +782,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

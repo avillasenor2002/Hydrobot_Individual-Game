@@ -17,13 +17,20 @@ public class DialogueSystem : MonoBehaviour
     [Header("Fade Settings")]
     public float fadeDuration = 0.25f;
 
-    [Header("Voice Sounds")]
+    [Header("Voice Sounds (blips)")]
     public AudioSource audioSource;
     public AudioClip[] voiceSounds;          // Pool of clips to pick from randomly
     public int charsPerSound = 2;            // How many characters typed between each sound
     public float voicePitchMin = 0.9f;       // Random pitch range min
     public float voicePitchMax = 1.1f;       // Random pitch range max
     public bool silenceOnSpaces = true;      // Skip sound for spaces and punctuation
+
+    [Header("Dialogue Clip")]
+    // Optional: dedicated AudioSource for the DialogueData.DialougeClip.
+    // If left empty, 'audioSource' is used and the typing blips are skipped
+    // while a dialogue clip is playing (so the pitch doesn't get messed up).
+    public AudioSource dialogueClipSource;
+    public bool matchTextSpeedToAudio = true;   // Type one letter per (clipLength / letterCount)
 
     private int charsSinceLastSound = 0;
 
@@ -45,11 +52,18 @@ public class DialogueSystem : MonoBehaviour
         if (hideRoutine != null)
             StopCoroutine(hideRoutine);
 
+        // Stop anything still playing from a previous line
+        if (audioSource != null) audioSource.Stop();
+        if (dialogueClipSource != null) dialogueClipSource.Stop();
+
         dialogueGroup.gameObject.SetActive(true);
 
         nameTMP.text = data.characterName;
         characterIconImage.sprite = data.characterIcon;
         dialogueTMP.text = "";
+
+        if (timerFillImage != null)
+            timerFillImage.fillAmount = 1f;
 
         StartCoroutine(FadeCanvasGroup(0f, 1f, fadeDuration));
         typingRoutine = StartCoroutine(TypeText(data));
@@ -60,14 +74,59 @@ public class DialogueSystem : MonoBehaviour
         dialogueTMP.text = "";
         charsSinceLastSound = 0;
 
-        foreach (char c in data.dialogueText)
+        string text = data.dialogueText ?? string.Empty;
+        AudioClip clip = data.DialougeClip;
+
+        // Where does the dialogue clip play?
+        AudioSource clipSource = dialogueClipSource != null ? dialogueClipSource : audioSource;
+        bool usingSeparateBlipSource = dialogueClipSource != null;
+
+        // ---- Start the dialogue audio clip ----
+        if (clip != null && clipSource != null)
         {
-            dialogueTMP.text += c;
-            PlayVoiceSound(c);
-            yield return new WaitForSeconds(data.textSpeed);
+            clipSource.Stop();
+            clipSource.clip = clip;
+            clipSource.loop = false;
+            clipSource.pitch = 1f;
+            clipSource.Play();
         }
 
-        // Start auto-hide countdown
+        // ---- Work out the typing speed so the text matches the audio length ----
+        float typeSpeed = data.textSpeed;
+        if (matchTextSpeedToAudio && clip != null && clip.length > 0f && text.Length > 0)
+        {
+            typeSpeed = clip.length / text.Length;
+        }
+
+        // ---- Type the text ----
+        foreach (char c in text)
+        {
+            dialogueTMP.text += c;
+
+            // Only play blips if the dialogue clip isn't using the same AudioSource
+            // (sharing it would overwrite the clip's pitch).
+            if (usingSeparateBlipSource || clip == null)
+                PlayVoiceSound(c);
+
+            if (typeSpeed > 0f)
+                yield return new WaitForSeconds(typeSpeed);
+            else
+                yield return null;
+        }
+
+        // ---- Wait for the audio clip to finish before starting the auto-hide timer ----
+        if (clip != null && clipSource != null)
+        {
+            float elapsed = 0f;
+            // Safety cap in case isPlaying gets stuck or the clip was restarted elsewhere
+            while (clipSource.isPlaying && elapsed < clip.length + 1f)
+            {
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        typingRoutine = null;
         hideRoutine = StartCoroutine(AutoHideTimer(data.autoHideTime));
     }
 
@@ -93,7 +152,8 @@ public class DialogueSystem : MonoBehaviour
         while (timer < time)
         {
             timer += Time.deltaTime;
-            timerFillImage.fillAmount = Mathf.Lerp(1f, 0f, timer / time);
+            if (timerFillImage != null)
+                timerFillImage.fillAmount = Mathf.Lerp(1f, 0f, timer / time);
             yield return null;
         }
 

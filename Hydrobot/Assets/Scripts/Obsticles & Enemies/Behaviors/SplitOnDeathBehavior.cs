@@ -15,6 +15,26 @@ public class EnemySplitOnDeath : MonoBehaviour
     public int hpReductionPerSpawn = 1;         // Amount to reduce after each spawn group
     public float speedIncreasePerSpawn = 0.25f; // Amount to increase moveSpeed for each spawn group
 
+    [Header("HP Visual Tiers")]
+    [Tooltip("If HP is below this value, the low-HP visual is used.")]
+    public int lowHPThreshold = 2;
+
+    [Tooltip("If HP is below this value, the critical visual is used instead. Must be lower than lowHPThreshold.")]
+    public int criticalHPThreshold = 1;
+
+    [Tooltip("Shown when HP is at or above lowHPThreshold. Usually the healthy body.")]
+    public GameObject normalVisual;
+
+    [Tooltip("Shown when HP is below lowHPThreshold but at or above criticalHPThreshold.")]
+    public GameObject lowHPVisual;
+
+    [Tooltip("Shown when HP is below criticalHPThreshold. Usually the most damaged variant.")]
+    public GameObject criticalVisual;
+
+    [Tooltip("If true, ApplyHPVisual is called on Start using the enemy's current HP. " +
+             "Useful for level-placed enemies that begin with reduced HP.")]
+    public bool applyVisualOnStart = true;
+
     [Header("Movement")]
     public float moveSpeed = 3f;
     public LayerMask bounceLayers;
@@ -42,6 +62,13 @@ public class EnemySplitOnDeath : MonoBehaviour
 
         moveDirection = GetRandomDiagonal();
         rb.velocity = moveDirection * moveSpeed;
+    }
+
+    private void Start()
+    {
+        // Make sure a level-placed enemy shows the right art for its starting HP.
+        if (applyVisualOnStart && enemy != null)
+            ApplyHPVisual(enemy.health);
     }
 
     private void OnEnable()
@@ -115,6 +142,9 @@ public class EnemySplitOnDeath : MonoBehaviour
                     splitScript.hpReductionPerSpawn = hpReductionPerSpawn;
                     splitScript.moveSpeed = currentSpeed + speedIncreasePerSpawn;
 
+                    // Swap the spawned enemy's visual to match its starting HP.
+                    splitScript.ApplyHPVisual(currentHP);
+
                     finalMoveSpeed = splitScript.moveSpeed;
                 }
             }
@@ -152,6 +182,30 @@ public class EnemySplitOnDeath : MonoBehaviour
             spawnedEnemyStartingHP = 0;
 
         moveSpeed += speedIncreasePerSpawn;
+    }
+
+    // ------------------------------------------------------------------
+    // HP VISUAL
+    // ------------------------------------------------------------------
+
+    /// <summary>
+    /// Swaps the visual tier based on HP. Picks exactly one of the three:
+    /// critical (lowest), low (middle), or normal. Any slot left empty is
+    /// simply skipped.
+    /// </summary>
+    public void ApplyHPVisual(int hp)
+    {
+        bool isCritical = hp < criticalHPThreshold;
+        bool isLow = !isCritical && hp < lowHPThreshold;
+
+        if (normalVisual != null)
+            normalVisual.SetActive(!isCritical && !isLow);
+
+        if (lowHPVisual != null)
+            lowHPVisual.SetActive(isLow);
+
+        if (criticalVisual != null)
+            criticalVisual.SetActive(isCritical);
     }
 
     private Vector2 GetRandomDiagonal()
