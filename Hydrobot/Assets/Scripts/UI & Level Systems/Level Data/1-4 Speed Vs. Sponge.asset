@@ -15,7 +15,8 @@ MonoBehaviour:
   levelName: 1-4 Speed Vs. Sponge
   objectiveName: 'Objective: Rescue Ready-Bot(s)'
   objectiveNum: 1
-  locked: 1
+  locked: 0
   isComplete: 0
+  isEvent: 0
   bestTime: 0
   bestWater: 0

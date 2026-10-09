@@ -1319,27 +1319,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a02579d85982cb419591d807c6238cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearCompleteGroup:
-  - {fileID: 11400000, guid: 00e48428241139c41a7b8add47763415, type: 2}
-  - {fileID: 11400000, guid: 70a92df338333384997100c33726d3ff, type: 2}
-  - {fileID: 11400000, guid: 4707af19f14c75944afb2758230d3c3f, type: 2}
-  - {fileID: 11400000, guid: 11d6374981dfdb347b6742c020ccdc46, type: 2}
-  - {fileID: 11400000, guid: e9e0a3fe4e4bcc141be5e995e10d96fc, type: 2}
-  - {fileID: 11400000, guid: 5ff7e9d4df4ceea45a60a55328a8f1d1, type: 2}
-  - {fileID: 11400000, guid: d6c837ba5373576489644b4cec7cdcc6, type: 2}
+  clearCompleteGroup: []
   alsoResetStats: 0
-  lockGroup:
-  - {fileID: 11400000, guid: 70a92df338333384997100c33726d3ff, type: 2}
-  - {fileID: 11400000, guid: 4707af19f14c75944afb2758230d3c3f, type: 2}
-  - {fileID: 11400000, guid: 11d6374981dfdb347b6742c020ccdc46, type: 2}
-  - {fileID: 11400000, guid: e9e0a3fe4e4bcc141be5e995e10d96fc, type: 2}
-  - {fileID: 11400000, guid: 5ff7e9d4df4ceea45a60a55328a8f1d1, type: 2}
-  - {fileID: 11400000, guid: d6c837ba5373576489644b4cec7cdcc6, type: 2}
-  eventResetGroup:
-  - {fileID: 11400000, guid: 00e48428241139c41a7b8add47763415, type: 2}
-  - {fileID: 11400000, guid: 70a92df338333384997100c33726d3ff, type: 2}
-  - {fileID: 11400000, guid: 4707af19f14c75944afb2758230d3c3f, type: 2}
-  - {fileID: 11400000, guid: d6c837ba5373576489644b4cec7cdcc6, type: 2}
+  lockGroup: []
+  eventResetGroup: []
   logChanges: 0
 --- !u!1 &925262146
 GameObject:
@@ -1614,11 +1597,86 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6324480628867081032, guid: 339a98e212bab584cac61ebdc65f19b2, type: 3}
+      propertyPath: growCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6324480628867081032, guid: 339a98e212bab584cac61ebdc65f19b2, type: 3}
+      propertyPath: growCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6324480628867081032, guid: 339a98e212bab584cac61ebdc65f19b2, type: 3}
+      propertyPath: growCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6324480628867081032, guid: 339a98e212bab584cac61ebdc65f19b2, type: 3}
+      propertyPath: growCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6324480628867081032, guid: 339a98e212bab584cac61ebdc65f19b2, type: 3}
+      propertyPath: growCurve.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 339a98e212bab584cac61ebdc65f19b2, type: 3}
+--- !u!1 &1339251578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1339251579}
+  - component: {fileID: 1339251580}
+  m_Layer: 0
+  m_Name: DEBUG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1339251579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339251578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.30782706, y: -2.3166616, z: 0.58913225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1339251580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339251578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e0dddde09204f4fab740c8ef710ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specificSceneName: Main Menu
+  specificSceneKey: 27
+  restartSceneKey: 28
+  invertStickKey: 25
+  showIndicatorKey: 26
+  togglePanelKey: 98
+  showPanel: 0
+  panelPosition: {x: 10, y: 10}
+  panelWidth: 360
+  invertStickToggle: {fileID: 0}
+  logActions: 1
 --- !u!1 &1372428264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,3 +2851,4 @@ SceneRoots:
   - {fileID: 650170517}
   - {fileID: 800667852}
   - {fileID: 1372428266}
+  - {fileID: 1339251579}

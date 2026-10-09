@@ -15,8 +15,8 @@ MonoBehaviour:
   levelName: 'BOSS: Boiling Tensions'
   objectiveName: 'Objective: Defeat Grand Scrapper'
   objectiveNum: 
-  locked: 1
+  locked: 0
   isComplete: 0
-  isEvent: 1
+  isEvent: 0
   bestTime: 0
   bestWater: 0

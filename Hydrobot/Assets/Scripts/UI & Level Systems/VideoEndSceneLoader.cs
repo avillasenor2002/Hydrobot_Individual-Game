@@ -1,11 +1,12 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Watches a VideoPlayer and loads a scene when the video finishes.
-/// Uses the loopPointReached event, which fires when playback reaches the
-/// end of the clip.
+/// Also has a hard fail-safe timer that forces the load after a set
+/// number of seconds, in case the video never fires its end event.
 /// </summary>
 [RequireComponent(typeof(VideoPlayer))]
 public class VideoEndSceneLoader : MonoBehaviour
@@ -22,6 +23,10 @@ public class VideoEndSceneLoader : MonoBehaviour
     [Tooltip("Seconds to wait after the video ends before loading. 0 loads immediately.")]
     [SerializeField] private float delayBeforeLoad = 0f;
 
+    [Tooltip("Maximum seconds to wait before forcing the load, even if the video hasn't ended. " +
+             "Set to 0 to disable the fail-safe.")]
+    [SerializeField] private float maxWaitTime = 50f;
+
     [Header("Options")]
     [Tooltip("If true, the video player's loop setting is forced off so the end event fires.")]
     [SerializeField] private bool forceLoopOff = true;
@@ -36,6 +41,7 @@ public class VideoEndSceneLoader : MonoBehaviour
     // Runtime state
     // ------------------------------------------------------------------
     private bool hasLoaded;
+    private Coroutine failSafeRoutine;
 
     private void Awake()
     {
@@ -62,12 +68,39 @@ public class VideoEndSceneLoader : MonoBehaviour
     {
         if (videoPlayer != null)
             videoPlayer.loopPointReached -= HandleVideoFinished;
+
+        if (failSafeRoutine != null)
+        {
+            StopCoroutine(failSafeRoutine);
+            failSafeRoutine = null;
+        }
     }
 
     private void Start()
     {
         if (playOnStart && videoPlayer != null)
             videoPlayer.Play();
+
+        // Start the fail-safe timer.
+        if (maxWaitTime > 0f)
+            failSafeRoutine = StartCoroutine(FailSafeTimer());
+    }
+
+    // ------------------------------------------------------------------
+    // FAIL-SAFE
+    // ------------------------------------------------------------------
+
+    private IEnumerator FailSafeTimer()
+    {
+        yield return new WaitForSecondsRealtime(maxWaitTime);
+
+        if (hasLoaded)
+            yield break;
+
+        if (logResult)
+            Debug.Log($"[VideoEndSceneLoader] Fail-safe fired after {maxWaitTime}s — forcing scene load.", this);
+
+        TriggerLoad();
     }
 
     // ------------------------------------------------------------------
@@ -78,16 +111,36 @@ public class VideoEndSceneLoader : MonoBehaviour
     {
         if (hasLoaded) return;
 
+        if (logResult)
+            Debug.Log("[VideoEndSceneLoader] Video finished normally.", this);
+
+        TriggerLoad();
+    }
+
+    // ------------------------------------------------------------------
+    // LOAD
+    // ------------------------------------------------------------------
+
+    private void TriggerLoad()
+    {
+        if (hasLoaded) return;
+
         if (string.IsNullOrEmpty(sceneToLoad))
         {
-            Debug.LogWarning("[VideoEndSceneLoader] No scene name set — video ended but no scene will load.", this);
+            Debug.LogWarning("[VideoEndSceneLoader] No scene name set — nothing will load.", this);
             return;
         }
 
         hasLoaded = true;
 
+        if (failSafeRoutine != null)
+        {
+            StopCoroutine(failSafeRoutine);
+            failSafeRoutine = null;
+        }
+
         if (logResult)
-            Debug.Log($"[VideoEndSceneLoader] Video finished — loading '{sceneToLoad}'.", this);
+            Debug.Log($"[VideoEndSceneLoader] Loading '{sceneToLoad}'.", this);
 
         if (delayBeforeLoad > 0f)
             Invoke(nameof(LoadScene), delayBeforeLoad);
@@ -107,8 +160,6 @@ public class VideoEndSceneLoader : MonoBehaviour
     /// <summary>Manually fires the load. Useful for skip buttons.</summary>
     public void SkipToScene()
     {
-        if (hasLoaded) return;
-        hasLoaded = true;
-        LoadScene();
+        TriggerLoad();
     }
 }

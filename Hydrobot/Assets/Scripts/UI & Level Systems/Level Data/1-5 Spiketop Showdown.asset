@@ -15,7 +15,8 @@ MonoBehaviour:
   levelName: 1-5 Spiketop Showdown
   objectiveName: 'Objective: Defeat All Scrappers'
   objectiveNum: 20
-  locked: 1
+  locked: 0
   isComplete: 0
+  isEvent: 0
   bestTime: 0
   bestWater: 0
